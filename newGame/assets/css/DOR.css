@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: blue;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #E6E6E6;
+}
+
+.contentSection{
+    margin-top: 6em;
+}
+
+.title{
+    margin-right: auto; 
+    margin-left: auto; 
+    width: fit-content;
+    font-size: 4em;
+    text-shadow: 5px 4px #000000;
+    margin-bottom: 0.5em;
+    
+    text-align: center;
+}
+
+
+/* ___________________________________________________ */
+/* The content  */
+.pictureStuff{
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    text-shadow: 2px 2px #000000;
+}
+#currentImg{
+    border: 10px solid red;
+    box-shadow: 0px 2px 10px #223031;
+    border-radius: 20px;
+}
+/* #currentCaption{
+    visibility: hidden;
+} */
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________ */
+/* The Democratic, Republican, Neither button div and button class */
+.buttonRow{
+    visibility: hidden;
+
+    margin-top: .15em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.playButton{
+    margin-right: auto; 
+    margin-left: auto; 
+    width: max-content;
+}
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________ */
+/* Score Counter on the top right */
+.scoreCount{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+    
+    display: flex;
+    flex-direction: row;
+}
+.scoreCountSection{
+    width: fit-content;
+    margin: 0em 1em;
+
+    background-color: red;
+    padding: 0.25em;
+    border-radius: 10px;
+    
+    box-shadow: 2px 2px 2px #223031;
+}
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________ */
+/* Button Styles */
+button, [type="button"],[type="submit"], .playButton .playText{
+    background-color: #23222c;
+    color: #E6E6E6;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    max-width: 90%;
+    cursor: pointer;
+    border: 5px solid red;
+    box-shadow: 0px 2px 10px #223031;
+    border-radius: 10px;
+    text-align: center;
+    width: 10em;
+}
+button:hover,[type="button"]:hover,[type="submit"]:hover, .playButton .playText:hover{
+    border: 5px solid #E6E6E6;
+    color: #E6E6E6;
+}
+button:active,[type="button"]:active,[type="submit"]:active, .playButton .playText:active{
+    border: 5px solid #396BF7;
+    color: #396BF7;
+}
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________ */
+/* End */
+footer{
+    color: #E6E6E6;
+    margin-top: 2em;
+    max-width: 100%;
+    padding: 3em;
+    height: auto;
+    background-color: red;
+}
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________ */
+/* Scroll Wheel */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: blue;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: skyblue; 
+}
+/* ___________________________________________________ */
+
+@media only screen and (max-width:600px){
+    .contentSection{
+        max-width: 100%;
+        margin-top: 10em;
+    }
+    .title{
+        font-size: 3em;
+    }
+}

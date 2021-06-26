@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>AJAX/JSON</title>
+	<script>
+		//setup - code to create the object
+		function getHTTPObject() {
+			var xmlhttp;
+			// branch for native XMLHttpRequest object
+			if (window.XMLHttpRequest){
+				xmlhttp=new XMLHttpRequest()
+			}
+			// branch for IE/Windows ActiveX version
+			else if (window.ActiveXObject){
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")
+			}else{	
+				return false;
+			}
+			return xmlhttp;
+		}
+
+		// We create the HTTP Object
+		var http = getHTTPObject();
+
+		// 1) called onload and every 1.5 seconds after that 
+		function checkUsers(){
+			// If I'm nto currently looking something up and the object exists...
+			if(http){
+				//http.open("GET","data.json",true); //do first!!!
+				http.open("GET","addUser.php",true);
+				http.onreadystatechange = handleHttpResponse;
+				http.send(null);
+				window.setTimeout('checkUsers();',1500);
+			}
+		}
+
+		// for the http object, rhe resdystatechange property to call
+		function handleHttpResponse(){
+			// when the ready state is 4, roundtrip is done and data complete
+			if(http.readyState == 4){
+				// parse the response text back from the call into JSON
+				var jsonObj = JSON.parse(http.responseText);
+				// to see the data in the console,
+				console.log(jsonObj);
+				// seperate out the data processing into another function, dealData()
+				dealData(jsonObj);
+			}
+		}
+
+		// deal with data on response
+		function dealData(arr){
+			var myData = "";
+			for(var i=0; i<arr.length; i++){
+				myData += arr[i].first + " " + arr[i].last + '<br/>';
+			}
+			document.getElementById('list').innerHTML = myData;
+		}
+
+		function addUser(){
+			let first = document.getElementById('first').value;
+			let last = document.getElementById('last').value;
+			// If I'm not currently looking something up and the object exists...
+			if(http){
+				http.open('GET',"addUser.php?first="+first+"&last="+last, true);
+				http.onreadystatechange = handleHttpResponse;
+				isWorking = true;
+				http.send(null);
+			}
+		}
+
+	</script>
+</head>
+<body onload="checkUsers()">
+	<h3>The List</h3>
+	<div id="list"></div>
+	<hr/>
+	<h3>Add to the list</h3>
+	First name: <input type="text" id="first" />
+	Last name: <input type="text" id="last" />
+	<button type="button" onclick="addUser()">Add to the List </button>
+</body>
+</html>

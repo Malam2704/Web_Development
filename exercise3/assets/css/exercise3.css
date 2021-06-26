@@ -1,0 +1,91 @@
+/* Removes all default browser effects */
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Centers the form and material */
+body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+}
+
+/* Sets it so that the top part the lgoo and lsit are in rows and not clumns
+and are evenly spaced with a bottom margin separating the h2 */
+#top{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+
+/* List effects to center the materials on margins and create the borders
+looking like rectangles */
+#top ul{
+    display: flex;
+    border: 0.15em solid black;
+}
+#top li{
+    padding: 1em;
+    list-style-type: none;
+    border-left: 0.05em solid black;
+}
+
+/* The h2 that comes above the form, it's text si enlarges and margins
+are created so the form is even spaced form it*/
+#formtext{
+    text-align: center;
+    font-size: x-large;
+    border-bottom: 0.05em solid black;
+    margin-bottom: 2em;
+}
+
+/* FInally the form where text color is that blue, every thing is in a column
+style instead of row, cenetered and larger font. There's paddign to evenly space out
+the box */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+    color: #2475E7;
+    border: 0.05em solid black;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+/* Makes the input boxes larger and changes the broder color of the box */
+input{
+    border-color: #2475E7;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* Just seperates the different input question sections in the form */
+form div, form fieldset{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 20em;
+    text-align: left;
+}
+
+/* the ranger div needing to be centered */
+#ranger{
+    text-align: center;
+}
+
+/* Sets size for the submit button */
+#submitting{
+    width: 5em;
+}
+
+/* Media query so there's no scroll dragging thigns, forgot their names */
+@media only screen and (max-width:1000px){
+    body{
+        max-width: 100%;
+    }
+}

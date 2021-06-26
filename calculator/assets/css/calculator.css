@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#calculator{
+    width: 30em;
+    margin-top: 16em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#screen{
+    height: 30px;
+    width: 404px;
+    border: 5px solid black;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+}
+button:hover{
+    color: darkgrey;
+}

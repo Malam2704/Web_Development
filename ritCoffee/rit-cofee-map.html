@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="data/coffee-data.js" type="text/javascript"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      var map;
+
+      function addMarker(latitude,longitude,title) {  
+        var position = {lat:latitude,lng:longitude};    
+        var marker = new google.maps.Marker({position: position, map:map});    
+        marker.setTitle(title); 
+
+        //Add a listener for the click event 
+        google.maps.event.addListener(marker, 'click', function(e){
+              makeInfoWindow(this.position,this.title); 
+        });
+      }
+
+      function makeInfoWindow(position,msg){     
+        // Close old InfoWindow if it exists      
+        // if(infowindow) infowindow.close();       
+        // Make a new InfoWindow       
+        infowindow = new google.maps.InfoWindow({                     
+          map: map,                
+          position: position,                
+          content: "<b>" + msg + "</b>"       
+        }); 
+      }
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: {lat:43.083848, lng:-77.6799},zoom: 16, mapTypeId: google.maps.MapTypeId.ROADMAP 
+        });
+        map.mapTypeId = 'satellite';
+        map.setTilt(45);
+
+        // One way to add a marker
+        // new google.maps.Marker({
+        //   position: {lat:43.083848, lng:-77.6799},
+        //   map,
+        //   title: "Hello World!",
+        // });
+        
+        // Another way to add a
+        // var position = {lat:43.082634, lng: -77.68004};  
+        // var marker = new google.maps.Marker({position: position, map: map});  
+        // marker.setTitle("Crossroads");
+        for(var i=0; i<coffeeShops.length; i++){
+          addMarker(coffeeShops[i]['latitude'],coffeeShops[i]['longitude'],coffeeShops[i]['title']);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuuz8RT6qPRfI1bO3R-rARHGIoZze0fx8&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

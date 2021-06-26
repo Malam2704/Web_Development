@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Guess the Party</title> 
+        <link href="assets/css/DOR.css" rel="stylesheet" type="text/CSS">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+        
+        <script src='assets/scripts/Politicians.js'></script>
+        <script src='assets/scripts/game.js'></script>
+    </head>
+    <body>
+        
+        <div class="scoreCount">
+            <div class="scoreCountSection">
+                <h3>Score</h3>
+                <p class="scoreNum">X</p>
+            </div>
+            <div class="scoreCountSection">
+                <h3>Current Streak</h3>
+                <p class="streakNum">X</p>
+            </div>
+        </div>
+
+        <div class="contentSection">
+            <h1 class="title">Guess the Politician's Political Party</h1>
+            <div class="pictureStuff">
+                <figure>
+                    <img id='currentImg' src="assets/images/unnamed.png" alt="Default image" width="400" height="533">
+                    <figcaption id="currentCaption"></figcaption>
+                    <!-- A check mark here for future purposes.<span>	&#10003;</span> -->
+                </figure>
+            </div>
+
+            <div class="playButton" onclick="playGame()">
+                <span class="playText">Play</span>
+            </div>
+            
+            <form class='buttonRow' id="buttonRow">
+                <input type="button" onclick='setParty("Democrat"); addPoint(); nextPic()' name='partyButton' value="Democrat"></input>
+                <input type="button" onclick='setParty("Republican"); addPoint(); nextPic()' name='partyButton' value="Republican"></input>
+                <input type="button" onclick='setParty("Neither"); addPoint(); nextPic()' name='partyButton' value="Neither"></input>
+            </form>
+        </div>
+
+        <footer>
+            <!-- As usual the copyright symbol -->
+            <p> &#169; Mohammed Alam 5/26/2020</p>
+        </footer>
+    </body>
+</html>

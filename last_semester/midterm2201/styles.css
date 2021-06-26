@@ -1,0 +1,64 @@
+* { 
+	margin: 0;
+	padding: 0; 
+}
+
+body{
+	background-color: lightblue;
+	margin: 2em;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header{
+	background-color: lightcoral;
+	color: navy;
+	border-color: firebrick;
+	border-style: solid;
+	border-left: 20px solid firebrick;
+}
+
+#state_name{
+	padding: 1.5em;
+	text-align: center;
+}
+
+.right{
+	float: right;
+	padding-left: 1.5em;
+}
+
+.left{
+	float: left;
+	clear: both;
+	padding-right: 1.5em;
+}
+
+h2{
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+	text-align: left;
+	color: rgb(0, 187, 255);
+	text-decoration: underline;
+}
+
+p{
+	font-size: 110%;
+	font-weight: 500;
+	line-height: 1.25em;
+}
+
+#state_capital{
+	background-color: greenyellow;
+}
+
+#tetoncap{
+	text-align: center;
+	margin: 0.5em;
+}
+
+.copyright{
+	margin-top: 1em;
+	font-size: 85%;
+	color: red;
+	float: right;
+}

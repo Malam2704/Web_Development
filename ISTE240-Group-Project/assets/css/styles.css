@@ -1,0 +1,300 @@
+/*  Group 6: ["Hip", "Hip"]
+    Spring 2021
+    ISTE240 Group Project
+    Stylesheet: CSS Survival Guide */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #212125;
+  color: #d4dfcb;
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+/* Header Logo and Site Name */
+.hero-header {
+    background-color: #E6E6E6;
+    border: 5px solid #819c27;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 13%;
+    padding: 5px;
+}
+
+.hero-text {
+    color: #819c27;
+    font-size: 2em;
+    text-shadow: 1px 1px #232126;
+    padding-left: 20px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+td, th {
+  border: 5px solid #E6E6E6;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #396BF7;
+}
+
+/* Navigation */
+.nav-icon {
+    width: 40%;
+    max-width: 50px;
+}
+
+nav{
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 0.5em solid #999999;
+  margin-bottom: 2em;
+}
+nav ul{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  font-size: large;
+  font-weight: bold;
+  list-style-type: none;
+}
+nav li{
+  width: 100%;
+  border: 5px solid #999999;
+}
+nav li a{
+  text-decoration: none;
+}
+
+a:link{color: #819c27}
+a:visited{color: #999999}
+nav li:hover,a:hover{color: #FF5700; border-color: #819c27;}
+a:active{color: #FF5700;}
+
+/* Highlight current page in nav */
+.active{
+  border: 5px solid #FF5700;
+}
+
+.active a {
+  color: #FF5700;
+}
+
+/* Page Layout & Style */
+h1, h2 {
+  color: #819c27;
+}
+
+h2, h3 {
+  max-width: 100%;
+  text-decoration: underline;
+}
+
+h3 {
+  color:#FF5700;
+}
+
+h4 {
+  color:#396BF7;
+  margin-left: 40px;
+}
+
+h2 + h3 {
+  margin-top: 20px;
+}
+
+p {
+  margin: 20px;
+  max-width: 100%;
+  text-indent: 20px;
+}
+
+hr{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.indent {
+  max-width: 100%;
+  margin: 0px auto;
+}
+
+.tip {
+  color:#819c27;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  margin: 10px;
+  max-width: 100%;
+}
+
+/* Demo Images */
+.demo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border: 3px solid #819c27;
+}
+
+
+/* Lists */
+/* ___________________________________________________ */
+ol, ul:not(nav ol, ul) {
+  padding: 10px;
+}
+
+ol li, ul li:not(nav li):not(.commentUL li){
+  padding: 5px;
+  margin-left: 60px;
+}
+
+ul li:not(nav li):not(.commentUL li){
+  padding: 5px;
+  margin-left: 70px;
+  list-style-type: square;
+}
+/* ___________________________________________________ */
+
+.commentUL li{
+  padding: 6px;
+  list-style-type: none; 
+  border: 5px solid #819c27;
+}
+
+/* ___________________________________________________ */
+/* The button styling such as the Add to List for comments, 
+and taking the quiz. Auto style to make them look nice and active and hovers
+for good UI experience. */
+[type="button"],[type="reset"],[type="submit"] {
+  background-color: #232126;
+  color: #E6E6E6;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 2px solid #819c27;
+  text-align: center;
+}
+[type="button"]:hover,[type="reset"]:hover,[type="submit"]:hover{
+    border: 5px solid #FF5700;
+    color: #FF5700;
+    font-weight: bold;
+}
+
+[type="button"]:active,[type="reset"]:active,[type="submit"]:active{
+  border: 5px solid #FF5700;
+  color: #FF5700;
+  font-weight: bold;
+}
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________ */
+/* Side Bar Nav Section */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #819c27;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #232126;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #E6E6E6;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________ */
+/* Scroll Wheel */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #232126;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#819c27; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #396BF7; 
+}
+/* ___________________________________________________ */
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width:1000px){
+  nav ul{
+      flex-direction: column;
+      align-items: center;
+  }
+  nav ul li{
+      width: 70%;
+      margin: .25em;
+      border: 0.05em solid #C4C4C4;
+      padding: .25em;
+  }
+}
+

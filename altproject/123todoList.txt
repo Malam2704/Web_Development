@@ -1,0 +1,3 @@
+Finish modularizing, putting the 3 php lines in all the files
+
+Ask professor how to make it so drop down menu is the same size. 

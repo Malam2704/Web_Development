@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* References Css */
+table td{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: .5em solid #2F4B5E;
+    padding: 1em;
+    font-size: x-large;
+}
+
+
+/* body properties here */
+body{
+    background-color: #2C94DE;
+    font-size: 170%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* The navigation settign CSS properties */
+/* .menu is the ul list with the descriptions containing
+the hovers */
+.menu{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #2F4B5E;
+    padding: 1em;
+    font-size: large;
+    box-shadow: 0px 5px 10px #223031;
+    margin-bottom: 2em;
+}
+.menu li{
+    display: inline;
+    position: relative;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    list-style-type: none;
+}
+.menu a,.menu li{
+    color: white;
+    text-decoration: none;
+}
+h2{
+    text-align: center;
+    font-size: 200%;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+h3{text-decoration: underline;}
+
+img, iframe{
+    border: 1em solid #2F4B5E;
+    box-shadow: 0px 5px 10px #223031;
+    margin-bottom: 1.5em;
+}
+
+p{
+    margin: 1em;
+}
+
+.center_figure{
+    text-align: center;
+}
+.img_left{
+    float: left;
+}
+.img_right{
+    float: right;
+}
+iframe{
+    margin-top: 3em;
+}
+.centered{
+    text-align: center;
+}
+.underliner{
+    text-decoration: underline;
+}
+
+/* If the user is on mobile no CSS transitions */
+@media only screen and (max-width:1300px){
+    /* CSS transition to help the user read */
+    body{
+        margin: 0;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        text-align: center;
+    }
+    /* When in mobile, underlines the header navs */
+    .menu_description{
+        text-decoration: underline;
+    }
+    /* Spaces all the items in the nav so they're not stacked
+    on top of each toher */
+    .inner_nav{
+        margin: 0.5em;
+        border: 1em solid #223031;
+    }
+    .menu li{
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    nav ul ul{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        text-align: center;
+        left: 0px;
+    }
+    table{
+        max-width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    table td{
+        width: 100%;
+        margin: 0em;
+        padding: 0em;
+    }
+    table img{
+        border: none;
+    }
+    img,iframe{
+        max-width: 100%;
+    }
+}
+
+/* If the width of the website is above 1000px */
+@media only screen and (max-width:1000px){
+    img,iframe{
+        border: none;
+    }
+}
+
+/* If the width of the website is below 1000px */
+@media only screen and (min-width:1000px){
+    nav ul ul{
+        position:absolute;
+        opacity:0;
+        left:-10000px;
+        top:100%;
+        transition:opacity 1s;
+    }
+    nav li:hover{
+        text-decoration: underline;
+    }
+    nav li:hover ul{
+        display: flex;
+        flex-direction: column;
+        left:0px;
+        background-color: #2F4B5E;
+        box-shadow: 0px 5px 10px #223031;
+        opacity:100;
+    }
+    nav li:hover ul li{
+        left: 0px;
+        margin: 0.5em;
+    }
+}
+
+/* If the width of the website is below 600px */
+@media only screen and (min-width:600px){
+    .img_left,.img_right{
+        margin: 1em;
+    }
+}

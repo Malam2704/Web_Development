@@ -1,0 +1,16 @@
+/* Removes all browser defaults and sets a font family*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Seperates all excercises into it's own box, adds a margin 
+and padding and formats it */
+.exercise{
+    margin-left: 1em;
+    border: 0.5em solid black;
+    margin: 2em;
+    padding: 1em;
+}
+

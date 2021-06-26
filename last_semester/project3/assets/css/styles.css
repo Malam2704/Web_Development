@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    margin-left: 10em;
+    margin-right: 10em;
+    background: #FAFF48;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#darky:hover{
+    text-decoration: underline;
+}
+
+header{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+nav{
+    text-align: center;
+}
+
+nav li{
+    display: inline-block;
+    width: 10em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-right: 3em;
+    margin-left: 3em;
+    padding: 0.75em;
+    background-color: #0fd1d2;
+    border-style: solid;
+    border-width: .5em;
+    border-color:#de1d72;
+}
+
+nav li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 150%;
+    align-self: center;
+}
+
+a:link{color: red}
+a:visited{color: black;}
+a:hover{color: green; text-decoration: underline;}
+a:active{color: blue;}
+
+.itemtop{
+    grid-area: head;
+}
+.item0{
+    grid-area: nav;
+}
+.item1{
+    grid-area: banner;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.item2{
+    grid-area: sideone;
+}
+.item3{
+    grid-area: sidetwo;
+}
+.item4{
+    grid-area: sidethree;
+}
+.item2 h3,.item3 h3,.item4 h3{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 200%;
+    font-weight: 900;
+}
+.item2 p, .item3 p, .item4 p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 120%;
+}
+
+.item7 a:hover{
+    text-decoration: none;
+}
+
+.item2:hover, .item3:hover, .item4:hover{ 
+    width: 40em;
+    border-style: solid;
+    border-width: .5em;
+    padding: 1em;
+    border-color:#de1d72;
+}
+
+.item5 h2,.item6 h2{
+    margin-bottom: 0.4em;
+}
+.item5,.item6{
+    margin-bottom: 1em;
+}
+
+.item5{
+    grid-area: vid1;
+    text-decoration: underline;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item6{
+    grid-area: vid2;
+    font-size: xx-large;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_header{
+    grid-area: footer_header; 
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+    text-decoration: underline;
+}
+.footer_image{
+    grid-area: footer_image; 
+}
+.image_sources{
+    grid-area: image_sources; 
+}
+.material_sources{
+    grid-area: material_sources; 
+}
+.material_sources h3, .image_sources h3{
+    text-align: center;
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.item7{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-gap: 3em;
+    font-weight: 600;
+    font-size: x-large;
+    grid-template-areas: 
+    'footer_header footer_header footer_header footer_header'
+    'image_sources image_sources image_sources footer_image'
+    'material_sources material_sources material_sources footer_image'
+    '. . . footer_image'
+    '. . . .';
+}
+
+.item7 li{
+    margin-bottom: 0.5em;
+    margin-left: 2em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-gap: 4em;
+    grid-template-areas:
+    'head head head'
+    'nav nav nav'
+    'banner banner banner'
+    'sideone sidetwo sidethree'
+    'vid1 vid1 vid1'
+    'vid2 vid2 vid2'
+    'footer footer footer';
+}
+
+@media only screen and (max-width:1500px) {
+    body{
+        margin: 1em;
+    }
+    h2{
+        font: 400;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    iframe{
+        max-width: 100%;
+    }
+    .item5, .item6,.item7{
+        text-align: center;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-gap: 4em;
+        grid-template-areas:
+        'head head head'
+        'nav nav nav'
+        'banner banner banner'
+        'sideone sideone sideone'
+        'sidetwo sidetwo sidetwo'
+        'sidethree sidethree sidethree'
+        'vid1 vid1 vid1'
+        'vid2 vid2 vid2'
+        'footer footer footer';
+    }
+    .footer_image{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .item7{
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3em;
+        font-weight: 600;
+        
+        grid-template-areas: 
+        'footer_header footer_header footer_header '
+        'footer_image footer_image footer_image'
+        'image_sources image_sources image_sources'
+        'material_sources material_sources material_sources'
+        ;
+    }
+    .item7 li{
+        margin-right: 1em;
+        margin-left: 1em;
+        margin-bottom: 2em;
+        font-weight: 100;
+    }
+    .item7 a{
+        font-size: small;
+    }
+}

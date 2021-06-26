@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Above jsut removes all defualt broswer margin and padding */
+/* Below sets it so there is a sort fo border to the left, thatisn't really a border
+just a repition fo the side.jpg to a specific width and height, and floated left */
+.border{
+    background-image: url(images/side.jpg);
+    width: 150px;
+    min-height: 100vh;
+    float: left;
+}
+
+/* Below is the grid area dispaly for the flower square grid
+each grid is 200px by 200pc and has a large font size which will ebchanged. */
+.Lilac{grid-area: Lilac;}
+.Dogwood{grid-area: Dogwood;}
+.Pansy{grid-area: Pansy;}
+.Iris{grid-area: Iris;}
+.squares{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    grid-gap: 0em;
+    font-weight: 600;
+    font-size: large;
+    grid-template-areas: 
+    "Lilac Dogwood"
+    'Pansy Iris';
+}
+
+/* The sq class property applies to each of oen of the boxes, where a margin of 1 is set
+a border radius for the corners, specific sizing for the boxes made by the columsn and rows
+above beign reinforces by relative untis. setting the backgorund character of dark green
+and the asterisk text color and centers it for moving */
+.sq{
+    margin: 1em;
+    border-radius: 20%;
+    background-color: darkgreen;
+    height: 10em;
+    width: 10em;
+    color: greenyellow;
+    text-align: center;
+    transition: background-color 2s;
+}
+
+/* Transtion form abvoe beign set so the bakcgorudn color changes in 2 seconds
+so nwo when I hover the cursor changes to a hand and the color of the square is purple */
+.sq:hover{
+    background-color: purple;
+    cursor: pointer;
+}
+
+/* Text psotion which is rleative to the box and controls the psotion form the top of the box
+z-index is incrweasde becuase the asterisk was above the text, also colro of the text was changed*/
+.text{
+    position: relative;
+    top: 80px;
+    font-size: 30px;
+    color: plum;
+    z-index: 1;
+}
+
+/* Contreols asterisk size and the shadow psotion and color which is absolute */
+.asterisk{
+    position: absolute;
+    font-size: 120px;
+    text-shadow: 5px 5px yellowgreen;
+}
+
+/* Media query changing the positon fo the sqwuare whent the dispaly widht is 600px or below */
+@media only screen and (max-width:600px){
+    .squares{
+        grid-template-areas: 
+        "Lilac"
+        "Dogwood"
+        "Pansy"
+        "Iris";
+    }
+}
+
+/* Media query removign the aforementioned border when the display width is 500px or below */
+@media only screen and (max-width:500px){
+    .border{
+        display: none;
+    }
+}
+

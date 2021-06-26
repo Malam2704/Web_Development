@@ -1,0 +1,48 @@
+body{
+    background-color: beige;
+}
+
+h1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+h3{
+    color: darkcyan;
+}
+
+#industrialist{
+    background-color: deepskyblue;
+}
+
+.right{
+    float: right;
+    clear: both;
+    padding: 10px;
+}
+
+.left{
+    float: left;
+    clear: both;
+}
+
+.glen-iris{
+    float: right;
+    clear: both;
+}
+
+.glen-cap{
+    text-align: center;
+}
+
+.copyright{
+    text-align: center;
+    color: red;
+    font-size: 80%;
+}
+
+a:hover{
+    color: orange;
+}

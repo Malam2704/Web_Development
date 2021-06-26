@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Your basic head code where it shows what the page is and
+        getting the view prots and referce css sheets -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Exercise 3 - Mohammed Alam</title> 
+        <link href="assets/css/exercise3.css" rel="stylesheet" type="text/CSS">
+    </head>
+    <body>
+        <!-- Below this div is just the top part where it's split into 
+        two parts faicng next to each other, the fake hoem menu and the small town logo -->
+        <div id="top">
+            <img src="assets/images/logo.png" alt="small town logo">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Activities</li>
+                    <li>Food</li>
+                    <li>Rest</li>
+                    <li>People</li>
+                    <li>Feedback</li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- h2 to show the title of the form, easier to manage outside of the form tag-->
+        <div id="formtext">
+            <h2>Please tell us about your visit</h2>
+        </div>
+
+        <!-- this is our form which has many divs to section out the different type of inputs
+        I'm using in the form form radio buttons and range, a date and number count -->
+        <form name="contactform">
+            <div>
+                <!-- asks for  number of people min to amx set at 1 - 100 -->
+                <label>How many in your group?</label> <input type="number" name="people_number" min="1" max="100"/><br/>
+            </div>
+            <div>
+                <!-- Justs puts the date -->
+                <label>When did you Visit?</label> <input type="date" value="2015-02-21">
+            </div>
+            <!-- Fieldset tag is used here with radio buttons -->
+            <fieldset>
+                <legend>Favorite Place</legend>
+                <input type="radio" name="interest"/> Baseball Field <br/>
+                <input type="radio" name="interest"/> Museum <br/>
+                <input type="radio" name="interest"/> Large Italian Resturant<br/>
+                <input type="radio" name="interest"/> Mom's Hotel<br/>
+                <input type="radio" name="interest"/> The Youth Hostel<br/>
+            </fieldset>
+            <!--  -->
+            <div id="ranger">
+                <label>Overall Rate your visit to our small town:</label><br>
+                <span id="scale"> 0<input type="range" min="0" max="10">10</span>
+            </div>
+            <input id="submitting" type="submit"/>
+        </form>
+
+
+    </body>
+</html>

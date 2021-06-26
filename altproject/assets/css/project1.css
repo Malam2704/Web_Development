@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* References Css */
+table td{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: .5em solid #2F4B5E;
+    padding: 1em;
+    font-size: x-large;
+}
+
+
+/* body properties here */
+body{
+    background-color: #2C94DE;
+    font-size: 170%;
+}
+.wrapper{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* The navigation setting CSS properties */
+/* .menu is the ul list with the descriptions containing
+the hovers */
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: #2F4B5E;
+    padding: 1em;
+    font-size: large;
+    box-shadow: 0px 5px 10px #223031;
+    margin-bottom: 2em;
+}
+.menu li{
+    display: inline;
+    position: relative;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    list-style-type: none;
+}
+.menu a,.menu li{
+    color: white;
+    text-decoration: none;
+}
+h2{
+    text-align: center;
+    font-size: 200%;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+h3{text-decoration: underline;}
+
+img, #weather{
+    border: 20px solid #2F4B5E;
+    box-shadow: 0px 5px 10px #223031;
+    margin-bottom: 1.5em;
+}
+
+p{
+    margin: 1em;
+}
+
+.center_figure{
+    text-align: center;
+}
+.img_left{
+    float: left;
+}
+.img_right{
+    text-align: center;
+    float: right;
+}
+#indexImage{
+    margin-bottom: 3em;
+    margin-top: 0em;
+    max-width: 45%;
+    margin-right: 1.5em;
+}
+
+.centered{
+    text-align: center;
+}
+.underliner{
+    text-decoration: underline;
+}
+footer{
+    margin-top: 2em;
+    font-size: 0.8em;
+    max-width: 100%;
+    padding: 3em;
+    height: auto;
+    background-color: #396BF7;
+}
+
+#weather{
+    float: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color:skyblue;
+    height: 400px;
+    font-size: 50px;
+    width: 600px;
+    max-width: 45%;
+    margin-bottom: 2em;
+    margin-top: 0em;
+}
+
+.g-recaptcha{
+    margin: 0;
+    padding: 0;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+}
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+/* ___________________________________________________ */
+/* Comment Section CSS Styling */
+.commentUL li{
+    font-weight: 900;
+    padding: 2em;
+    list-style-type: none;
+    border: 1em solid #2F4B5E;
+    border-radius: 50px;
+    background: #0a6eb6;
+}
+.commentUL .dateName{
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: x-large;
+}
+.commentUL .dateMod{
+    float: right;
+    margin-bottom: 1em;
+}
+  
+  /* ___________________________________________________ */
+  /* The button styling such as the Add to List for comments, 
+  and taking the quiz. Auto style to make them look nice and active and hovers
+  for good UI experience. */
+[type="button"],[type="reset"],[type="submit"] {
+    background-color: #23222c;
+    color: #E6E6E6;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 5px solid #2F4B5E;
+    text-align: center;
+}
+[type="button"]:hover,[type="reset"]:hover,[type="submit"]:hover{
+      border: 5px solid #9fd5fb;
+      color: #9fd5fb;
+}
+[type="button"]:active,[type="reset"]:active,[type="submit"]:active{
+    border: 5px solid #396BF7;
+    color: #396BF7;
+}
+/* ___________________________________________________ */
+/* ___________________________________________________ */
+/* If the user is on mobile no CSS transitions */
+/* below 1300px */
+@media only screen and (max-width:1300px){
+    /* CSS transition to help the user read */
+    body{
+        margin: 0;
+    }
+
+    /* Spaces all the items in the nav so they're not stacked
+    on top of each toher */
+    table{
+        max-width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    table td{
+        width: 100%;
+        margin: 0em;
+        padding: 0em;
+    }
+    table img{
+        border: none;
+    }
+    img, #weather, #indexImage{
+        max-width: 100%;
+    }
+    #weather{
+        margin-left: 0em;
+    }
+}
+
+/* If the width of the website is above 1000px */
+@media only screen and (max-width:1000px){
+    img, #weather{
+        border: none;
+    }
+    /* When in mobile, underlines the header navs
+    and puts it into a mobile nav format */
+    .menu{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        text-align: center;
+    }
+    .menu_description{
+        text-decoration: underline;
+    }
+    .inner_nav{
+        margin: 0.5em;
+        border: 1em solid #223031;
+    }
+    .menu li{
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    nav ul ul{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        text-align: center;
+        left: 0px;
+    }
+
+    /* Removes inlien margins for comment when scrren is small*/
+    .commentUL p{
+        margin: 0em;
+    }
+}
+
+/* If the width of the website is above 1000px */
+/* Used for the nav hover over menu */
+@media only screen and (min-width:1000px){
+    nav ul ul{
+        position:absolute;
+        opacity:0;
+        left:-10000px;
+        top:100%;
+        transition:opacity 1s;
+    }
+    nav li:hover{
+        text-decoration: underline;
+    }
+    nav li:hover ul{
+        display: flex;
+        flex-direction: column;
+        left:0px;
+        background-color: #2F4B5E;
+        box-shadow: 0px 5px 10px #223031;
+        opacity:100;
+    }
+    nav li:hover ul li{
+        left: 0px;
+        margin: 0.5em;
+    }
+}
+
+/* If the width of the website is above 600px */
+@media only screen and (min-width:600px){
+    /* .img_left,.img_right{
+        margin: 1em;
+    } */
+}
+@media only screen and (max-width:600px){
+    .commentUL li{
+        text-align: center;
+    }
+    .commentUL p{
+        margin-bottom: 1em;
+    }
+    .commentUL .dateMod{
+        float: none;
+    }
+}

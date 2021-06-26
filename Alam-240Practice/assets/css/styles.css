@@ -1,0 +1,64 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.title{
+    font-family: Helvetica, sans-serif;
+    background-image: url("../images/raven_background.jpg");
+}
+.titleAuthor{
+    font-size: 10pt;
+}
+
+#myContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+p{
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.firstLetter{
+    font-size: 20pt;
+    color: red;
+}
+
+.column{
+    position: absolute;
+    top: 200px;
+    width: 300px;
+}
+
+.cOne{
+    left: 0px;
+}
+
+.cTwo{
+    left: 330px;
+    
+}
+.cTwo figure{
+    margin: 1em;
+    text-align: center;
+}
+
+.cThree{
+    left: 660px;
+}
+
+.formText{
+    text-decoration: underline;
+    margin: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#myForm{
+    visibility: hidden;
+}

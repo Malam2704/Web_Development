@@ -1,0 +1,116 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color:#365266;
+    color: gold;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid gold;
+}
+
+p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#navigation{
+    display: block;
+    width: 50em;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2.5em;
+    text-align: center;
+    font-size: 120%;
+}
+
+#menu{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75em;
+}
+
+.nav_list{
+    display: inline;
+    background-color: goldenrod;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    padding: 0.5em;
+    border: 1px solid goldenrod;
+}
+
+.nav_anchor{
+    text-decoration: none;
+    color: goldenrod;
+    color: #365266;
+}
+
+#headlogo{
+    float: left;
+    clear: both;
+    width: 15%;
+}
+
+#homepic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+.headers{
+    text-align: center;
+    font-size: 240%;
+    font-weight: 800;
+}
+
+#about_us{
+    margin: 1em;
+}
+
+dt{
+    text-decoration: underline;
+}
+dd{
+    margin-top: 0.25em;
+    margin-left: 2em;
+}
+
+.name_list{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+.officials_name_list_element{
+    display: inline-block;
+    margin-top: 2em;
+    margin-right: 3em;
+    margin-left: 3em;
+    margin-bottom: 2em;
+    width: max-content;
+    height: 38px;
+}
+
+.members_list_element_name{
+    display: inline-block;
+    margin-top: 2em;
+    margin-right: 4em;
+    margin-left: 4em;
+    margin-bottom: 2em;
+    width: max-content;
+    height: 38px;
+}
+
+#bookcover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content
+}
+
+

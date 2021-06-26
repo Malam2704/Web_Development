@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Homepage - Mohammed Alam</title> 
+        <link href="newHome.css" rel="stylesheet" type="text/CSS">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="newScripts.js"></script>
+    </head>
+    <body>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Published Projects</a>
+            <a href="javascript:void(0);" class="icon" onclick="makeMobileButtons()">
+                <em class="fa fa-bars"></em>
+            </a>
+        </nav>
+
+        <div class="wrapper">
+            <!-- A description of me and 4 paragraphs entailing my eduction
+            past prgramming knowledge, what my hobbies are, and my contact information -->
+            <div id="about" class="mySection" >
+                <h1 class="name titleShadow">Mohammed Alam</h1>
+
+                <figure class="picture">
+                    <img img='myPic' src="assets/images/my_photo.jpg" width="500" height="600" alt="A picture of myself">
+                </figure>
+
+                <p class="p1">
+                    Well, my name is Mohammed Alam, and I'm from New York City.
+                    I am currently a Computing Exploration Major at RIT, looking at either Software
+                    Engineering, Computer Science, or Web & Mobile Computing.
+                </p>
+                <p class="p2">
+                    My hobbies include playing video games, trading in the stock market, and 
+                    doign some general research about a few topics I deem interesting, such as
+                    the elections, infastructure development, and any data that pertains to maps.
+                    I have thousands of hours of history on these maps alone. 
+                </p>
+                <p class="p3">For Programming, I have been doing so since my Sophmore Year fo Highschool
+                    Transitioning through the drag and drop based programs in Scratch, in AP CS to
+                    Java in my Software Development Class. I've dabbled in Python the most, and I would
+                    say I'm the most confident using Python's Object Oriented framework. 
+                </p>
+                <p class="p4">My email is ma3655@rit.edu / ma3655@g.rit.edu , so if you have any questions ask away.</p>
+            </div>
+
+            <div class="slideShowBox mySection" id="slideShowBox">
+                <h1 style="text-align:center" class="titleShadow">View My Featured Projects</h1>
+    
+                <div class="container">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 6</div>
+                        <video controls width="100%" height='465px'>
+                            <source src="assets/media/finalGP.mp4"
+                                    type="video/mp4">
+                        
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+    
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 6</div>
+                        <video controls width="100%" height='465px'>
+                            <source src="assets/media/individualP.mp4"
+                                    type="video/mp4">
+                        
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+    
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 6</div>
+                        <video controls width="100%" height='465px' muted>
+                            <source src="assets/media/gtp.mp4"
+                                    type="video/mp4">
+                        
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+    
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 6</div>
+                        <video controls width="100%" height='465px' muted>
+                            <source src="assets/media/cyberpunk.mp4"
+                                    type="video/mp4">
+                        
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+    
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 6</div>
+                        <video controls width="100%" height='465px'>
+                            <source src="assets/media/fakenews.mp4"
+                                    type="video/mp4">
+                        
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+    
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 6</div>
+                        <video controls width="100%" height='465px'>
+                            <source src="assets/media/wyoming.mp4"
+                                    type="video/mp4">
+                        
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+                    <div class="caption-container">
+                        <p id="caption">Nothing Clicked Yet</p>
+                    </div>
+    
+                    <div class="row">
+                        <div class="column">
+                            <img class="demo cursor" src="assets/images/CroppedGroupLogin.jpg" style="width:100%; height: 130px" onclick="currentSlide(1)" alt="The CSS Survival Guide">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="assets/images/CroppedIndividualPorject.jpg" style="width:100%; height: 130px" onclick="currentSlide(2)" alt="Welcome To NYC">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="assets/images/CroppedGTP.jpg" style="width:100%; height: 130px" onclick="currentSlide(3)" alt="My Game: Democrat or Republican">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="assets/images/CroppedCyberPunk.jpg" style="width:100%; height: 130px" onclick="currentSlide(4)" alt="CyberPunk 2077">
+                        </div>
+                        <div class="column">
+                            <img class="demo cursor" src="assets/images/Croppedfakenews.jpg" style="width:100%; height: 130px" onclick="currentSlide(5)" alt="A Report I did about Fake News">
+                        </div>   
+                        <div class="column">
+                            <img class="demo cursor" src="assets/images/CroppedWyomingReport.jpg" style="width:100%; height: 130px" onclick="currentSlide(6)" alt="My Report about the state of Wyoming">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="exercises" class="mySection">
+                <h2>Exercises</h2>
+                <ol>
+                    <li ><a href="#navigation">Exercise 1</a> - My homepage website, literally this one you're looking at.</li>
+                    <li ><a href="exercise2/index.html">Exercise 2</a> - This is an excercise inclusing responsive web design, a placement of images, positions, and transitions</li>
+                    <li ><a href="exercise3/index.html">Exercise 3</a> - Forms example of creation</li>
+                    <li ><a href="exercise4/EX04/EX04.html">Exercise 4</a> - Forms and Javascript exercise</li>
+                    <li ><a href="exercise5/EX05/EX05.html">Exercise 5</a> - JavaScript part 2, where we delve into deeper topics such as simplifying the document calss and nodes.</li>
+                    <li ><a href="exercise6phpFormsStart/orderform.php">Exercise 6</a> - PHP Pizza Ordering Form</li>
+                    <li ><a href="http://solace.ist.rit.edu/~ma3655/240/exercise7/contact.php">Exercise 7</a> - Essentially a comment section made with the SQL database where your info is recorded and printed out in the comment section</li>
+                    <li ><a href="dbInsertStart/phpSelect.php"> PHP Data Selection Demo</a> - Where we can choose a pet of a type of fish and display it on an HTML table</li>
+                </ol>
+            </div>
+
+            <div id="individual" class="mySection">
+                <h2>Individual Projects</h2>
+                <ol>
+                    <li ><a href="project1/index.php">Project 1 In Progress</a> - First edition of my education website about my home, New York City, The Mobile Version is in Progress</li>
+                    <li ><a href="ISTE-INDIVIDUAL-PROJECT/index.php">Project 1 Final</a> - Final edition of the in progress project</li>
+                    <li ><a href="final/startfiles-sec2/index.php"> Final Practical</a> - </li>
+                </ol>
+            </div>
+
+            <div id="group" class="mySection">
+                <h2>Group Projects</h2>
+                <ol>
+                    <li ><a href="ISTE240-Group-Project/index.php">Project 1: The CSS Survival Guide</a> - a quick guide to help users learn CSS or get a resfresher and immedietly start programming</li>
+                </ol>
+            </div>
+
+            <div id="projects" class="mySection">
+                <h2>Published Projects</h2>
+                <ol>
+                    <!-- <li ><a href="last_semester/myblog/index.html"> 1 State, 2 Stae, Red State, Blue State</a> - My Political blog which I update weekly. After the 2020 election, I was curious in the
+                        world of politics which I always ignored because I didn't undertand it. After the ruish of the 2020 elections, Politics have been one of my key interests, and I have spent
+                        my free time researchign details, the most famous of which are Demogrpahi and Political shifts found in the nation.</li> -->
+                    <li ><a href="last_semester/project3/index.html">My CyberPunk 2077 Website</a> - I created a website to showcase the release of CyberPunk 2077 and tell a user what it's all about</li>
+                    <li ><a href="last_semester/project2/index.html">A Guide About All The Fake News</a> - A website to introduce users on the plethora of fake news plagueing society, and why it's so harmful, and mopre importantly, how to avoid it.</li>
+                    <li ><a href="last_semester/project1/index.html">My Extended Resume</a> - My resume and other information that is an extension of my resume and showcases what I've done, for my work experience.</li>
+                    <li ><a href="last_semester/midterm2201/index.html"> Welcome to Wyoming</a> - A guide about visitng the state of Wyoming and all the natural wonders hidden inside.</li>
+                    <li ><a href="last_semester/pages/jojodoss/index.html"> Jojodoss's Webpage (In Progress)</a> - A introduction to my friend's Youtube Channel</li>
+                    <li ><a href="last_semester/pages/pokegar/index.html"> Pokegar's Webpage (In Progress)</a> - A introduction to my other friend's Youtube Channel</li>
+                    <li ><a href="last_semester/pages/atlantean_Empire/index.html"> The Atlantean Empire (In Progress)</a> - The video game website towards one of my organizations/guild's in this game AQW</li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>

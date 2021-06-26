@@ -1,0 +1,179 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: skyblue;
+}
+nav{
+    text-align: center;
+}
+
+nav li{
+    display: inline-block;
+    width: 10em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-right: 3em;
+    margin-left: 3em;
+    padding: 1em;
+    background-color: turquoise;
+    border-style: solid;
+    border-color:black;
+}
+
+nav li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 150%;
+    align-self: center;
+}
+
+a:link{color: red;}
+a:visited{color: black;}
+a:hover{color: green;}
+a:active{color: blue;}
+
+header{
+    width: 80%;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1{
+    text-align: center;
+    font-size: 325%;
+    text-decoration: underline;
+}
+
+.title_words{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-size: 200%;
+    text-decoration: underline;
+}
+
+.flex_container, .flex_container_sub{
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.index_section{
+    margin-left: 2em;
+}
+
+.sub_section{
+    margin-right: 2em;
+}
+.index_aside{
+    align-self: center;
+}
+
+.section_centered{
+    text-align: center;
+}
+
+dt{
+    text-align: center;
+    margin-top: 1.75em;
+    margin-bottom: .75em;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 150%;
+}
+
+#extra_info{
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    font-style: italic;
+}
+
+#three_image{
+    text-align: center;
+    margin-top: 0.5em;
+
+}
+
+.index_section li{
+    margin-left: 2em;
+    margin-bottom: 1.5em;
+}
+
+figcaption{
+    text-align: center;
+}
+
+#last_political_section{
+    max-width: 900px;
+}
+
+h2{
+    text-decoration: underline;
+    margin-bottom: 1em;
+    font-size: 200%;
+}
+
+.sub_section h3{
+    text-decoration: underline;
+}
+
+.want_to_learn_more{
+    width: 40em;
+}
+
+img, iframe{
+    border: 1em solid #2F4B5E;
+    box-shadow: 0px 5px 10px #223031;
+}
+
+/* .index_pic{
+    max-width: 500px;
+} */
+
+/* Fix Margin errors, so I they're not like this, also is this a good design? */
+/* Anything I can add? */
+
+/* Media Qury, change the width of the header block to 50% */
+/* Media Query, no body margins */
+
+/* Media Query to shrink the size of the picture alogn with the shrinking of the page */
+@media screen and (max-width:950px){
+    nav li{
+        margin: 1em;
+    }
+    .flex_container{
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: 5em;
+    }
+    .flex_container_sub{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        text-align: center;
+
+        margin-bottom: 5em;
+    }
+    .sub_page_containers{
+        flex-direction: column-reverse;
+    }
+    .sub_section, .sub_aside{
+        margin: 0;
+    }
+    .want_to_learn_more{
+        width: 100%;
+    }
+    img{
+        max-width: 100%;
+    }
+}
+
+

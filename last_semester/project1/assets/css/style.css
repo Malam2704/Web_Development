@@ -1,0 +1,120 @@
+
+body{
+    font-family: "Trebuchet MS", Tahoma, Verdana;
+    background-color: lightskyblue;
+}
+
+#body_resume{
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid gray;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+resume.li{
+    margin-left: 50px;
+}
+
+.title{
+    margin-top: 60px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.center_picture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.endtext{
+    text-align: center;
+}
+
+#some_nav{
+    position: fixed;
+    border-color: black;
+    border-bottom: solid;
+    background-color: turquoise;
+    text-align: center;
+    
+    top: 0%;
+    left: 0%;
+    height: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.some_nav_li{
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#bths_pic{
+    float: right;
+    clear: both;
+    height: 450px;
+    margin-top: 25px;
+}
+
+#rit_pic{
+    float: right;
+    clear: both;
+    height: 366px;
+}
+
+#bths{
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+#rit{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+#ecolink_logos{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+.endtext{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: darkblue;
+    text-align: center;
+}
+
+.endsection{
+    text-align: center;
+}
+#printer{
+    font-size: 200%;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#pdf_download{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.important{
+    background-color: cornflowerblue;
+}
+
+#writeup{
+    text-align: center;
+    font-size: xx-large;
+}
+

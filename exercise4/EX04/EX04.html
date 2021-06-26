@@ -1,0 +1,74 @@
+<!-- Mohammed Alam -->
+<!-- 2/28/2021 -->
+<!-- ISTE240 Exercise 4 - Javascript Part 1 -->
+<!DOCTYPE html>
+<html>
+<!-- demonstration of JavaScript form validation -->
+<head>
+    <meta charset="utf-8">
+    <title>eXERCISE 4</title>
+    <script src="assets/js/EX04.js"></script>
+    <link href="assets/css/EX04.css" rel="stylesheet" type="text/CSS">
+</head>
+<body>
+    <!-- The first exercise's body code -->
+    <div id="uno" class="exercise">
+        <div>
+            <h2>JavaScript Exercise 4a </h2> 
+            <p id="text">This style of this paragraph will change when you click the button below.</p>
+        </div>
+        <div>
+            <button id="styleMe" onclick="jsStyle()">Change Style</button>
+        </div>
+    </div>
+
+    <!-- The second exercise's body code -->
+    <div id="dos" class="exercise">
+        <h2>JavaScript Exercise 4b </h2> 
+        <form id="regForm">
+            First name: <input type="text" id="fname" value="Boo"><br>
+            Last name: <input type="text" id="lname" value="Radley"><br>
+            <input type="button" onclick="getFormValues();" value="Submit">
+        </form>
+    </div>
+
+    <!-- The third exercise's body code -->
+    <div id="tres" class="exercise">
+        <h2>JavaScript Exercise 4c</h2> 
+        <form>
+            <select id="mySelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>Blue</option>
+                <option>Yellow</option>
+                <option>Orange</option>
+                <option>Purple</option>
+            </select>
+            <input type="button" onclick="getOptions()" value="Display the Options">
+        </form>
+    </div>
+
+    <!-- The fourth exercise's body code -->
+    <div id="quatro" class="exercise">
+        <div>
+            <h2>JavaScript Exercise 4d </h2> 
+        </div>
+        <div>
+            <p id="rb" onmouseover="redder()" onmouseout="blackker()">This sentence will turn red when you mouseover it.</p>
+        </div>
+    </div>
+
+    <!-- The fifth exercise's body code -->
+    <div id="cinco" class="exercise">
+        <div>
+            <h2>JavaScript Exercise 4d </h2> 
+        </div>
+        <form>
+            <input type="text" id="firstoperand" placeholder=First Operand"/><br>
+            <input type="text" id="secondoperand" placeholder="Second Operand"/><br>
+            <input type="button" onclick="divide()" value="Divide" />
+            <input type="button" onclick="multiply()" value="Multiply" />
+            <p>The answer: <span id="result"></span></p>
+        </form>
+    </div>
+</body>

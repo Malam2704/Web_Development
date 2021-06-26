@@ -1,0 +1,85 @@
+<!-- Mohammed Alam -->
+<!-- 3/14/2021 -->
+<!-- ISTE240 Exercise 5 - Javascript Part 2 -->
+<!DOCTYPE html>
+<html>
+<!-- demonstration of JavaScript form validation -->
+<head>
+    <meta charset="utf-8">
+    <title>EXERCISE 5</title>
+    <link href="assets/css/EX05.css" rel="stylesheet" type="text/CSS">
+    <script src="assets/js/EX05.js"></script>
+    
+</head>
+<body>
+    <!-- The first exercise's body code -->
+    <div id="uno" class="exercise">
+        <div>
+            <h2>JavaScript Exercise 5a </h2> 
+            <!-- For the love of god, don't do it on an external style sheet -->
+            <p id="text" style="left: 0px; position: relative;"> I Move </p>
+        </div>
+        <div>
+            <!-- God, please remember to use the actual id tag in the html and don't
+            freaking forget the damn semi colons -->
+            <button id="styleMe" onclick="right('text');">Change Style</button>
+            <button id="styleMe" onclick="document.getElementById('text').style.left = 0;">Reset Left</button>
+        </div>
+    </div>
+
+    <!-- The second exercise's body code -->
+    <!--Exercise 5b -->
+    <div id="dos" class="exercise">
+        <p class="exerTitle">JavaScript Exercise 5b </p> 
+        <form id="regForm">
+            <input type="text" id="fname" placeholder = "boo"><br>
+            <input type="text" id="lname" placeholder = "Radley"><br>
+            <input type="checkbox" id="dog">I have a dog. (Check if you do)<br>
+            <input type="text" id="major" placeholder = "major"><br>
+            <input type="button" onclick="howmany();" value="Count of inputs">
+        </form>
+    </div>
+
+    <!-- The third exercise's body code -->
+    <div id="tres" class="exercise">
+        <h2>JavaScript Exercise 5c</h2> 
+        <form>
+            <select id="mySelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>Blue</option>
+                <option>Yellow</option>
+                <option>Orange</option>
+                <option>Purple</option>
+            </select>
+            <input type="button" onclick="colorChanger()" value="Change the color to Yellow">
+        </form>
+    </div>
+
+    <!-- The fourth exercise's body code -->
+    <!-- god don't forget you had mouseover or out -->
+    <div id="quatro" class="exercise">
+        <div>
+            <h2>JavaScript Exercise 5d </h2> 
+        </div>
+        <div>
+            <p id="rb" onmouseover="changer()" onmouseout="blackker()">This sentence will turn red when you mouseover it.</p>
+        </div>
+    </div>
+
+    <!-- The fifth exercise's body code -->
+    <div id="cinco" class="exercise">
+        <div>
+            <h2>JavaScript Exercise 5e </h2> 
+        </div>
+        <form>
+            <input type="text" id="firstoperand" placeholder=First Operand"/><br>
+            <input type="text" id="secondoperand" placeholder="Second Operand"/><br>
+            <input type="button" onclick="divide()" value="Divide" />
+            <input type="button" onclick="multiply()" value="Multiply" />
+            <!-- we create nodes by making a varibale out of the stuff already ther
+            in this case the span -->
+            <p>The answer: <span id="result"> </span></p>
+        </form>
+    </div>
+</body>

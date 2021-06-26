@@ -1,0 +1,129 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    color: rebeccapurple;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    margin: 2em;
+}
+
+#title_screen{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+}
+
+.menu_item{
+    display: inline;
+    margin-right: 1em;
+    margin-left: 1em;
+    color: green;
+    font-size: x-large;
+}
+
+#menu{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    margin-bottom: 2em;
+}
+
+div{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+a:link{color: green;}
+a:visited{color: yellowgreen;}
+a:hover{color: yellow;}
+a:active{color: blue;}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.sec_title{
+    font-size: 200%;
+    text-decoration: underline;
+}
+
+.def_term{
+    text-decoration: underline;
+    margin-top: 1em;
+}
+
+.description{
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    font-size: x-large;
+}
+
+.description_link{
+    margin-top: 0.5em;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    font-size: x-large;
+}
+
+.my_images{
+    float: right;
+    clear: both;
+    
+    margin-right: 0%;
+}
+
+.image_block{
+    height: 620px;
+}
+
+.center_figcaption{
+    text-align: center;
+    font-weight: 600;
+}
+
+#endlinks{
+    margin: 2em;
+    text-align: center;
+    font-size: 150%;
+}
+
+.ending_links{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.important{
+    color:black;
+    background-color: yellowgreen;
+}
+
+@media screen and (max-width:1180px){
+    img, nav{
+        max-width: 100%;
+        margin: 0;
+    }
+    .menu_item{
+        
+        display: inline-block;
+        margin: 0.5em;
+        padding: 0.45em;
+        border-style: dashed;
+        border-color:black;
+    }
+    .image_block{
+        margin-bottom: 7em;
+    }
+    .def_term,h1,h2,h3{
+        text-align: center;
+    }
+    .description{
+        margin: 0;
+        margin-bottom: 4em;
+        font-size: larger;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- ISTE240 Exercise 4d -->
+<meta charset=utf-8 />
+<title>Mouseover Red</title>
+<script>
+	//put a mouseover and a mouseout event on the p tag below
+
+	//create a function that is called on the mouseover that turns the text red
+	function redder(){
+		document.getElementById('rb').style.color = "red";
+	}
+	//create a function that is called on the mouseout that turns the text black
+	function blackker(){
+		document.getElementById('rb').style.color = "black";
+	}
+</script>
+
+</head> 
+<body>
+	<div>
+		<h2>JavaScript Exercise 4d </h2> 
+	</div>
+	<div>
+		<p id="rb" onmouseover="redder()" onmouseout="blackker()">This sentence will turn red when you mouseover it.</p>
+	</div>
+</body>
+</html>

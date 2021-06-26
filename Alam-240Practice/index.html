@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Homepage - Mohammed Alam</title> 
+        <link href="assets/css/styles.css" rel="stylesheet" type="text/CSS">
+        <script src='assets/scripts/scripts.js'></script>
+    </head>
+    <body>
+        <h1 class="title">THE RAVEN <span class="titleAuthor" onmouseover="changeText()"> by Edgar Allen Poe</span></h1>
+
+        <div id="myContent">
+            <div class="column cOne">
+                <p><span class="firstLetter">O</span>nce upon a midnight dreary, while I pondered, weak and weary,
+    
+                    Over many a quaint and curious volume of forgotten lore,
+            
+                    While I nodded, nearly napping, suddenly there came a tapping,
+            
+                    As of some one gently rapping, rapping at my chamber door.
+            
+                    "'Tis some visiter," I muttered, "tapping at my chamber door --
+            
+                                            Only this, and nothing more."</p>
+        
+        
+        
+                <p><span class="firstLetter">A</span>h, distinctly I remember it was in the bleak December,
+        
+                    And each separate dying ember wrought its ghost upon the floor.
+            
+                    Eagerly I wished the morrow; -- vainly I had sought to borrow
+            
+                    From my books surcease of sorrow -- sorrow for the lost Lenore --
+            
+                    For the rare and radiant maiden whom the angels name Lenore --
+            
+                                            Nameless here for evermore.</p>
+        
+        
+        
+                <p><span class="firstLetter">A</span>h, distinctly I remember it was in the bleak December,
+        
+                    And each separate dying ember wrought its ghost upon the floor.
+        
+                    Eagerly I wished the morrow; -- vainly I had sought to borrow
+        
+                    From my books surcease of sorrow -- sorrow for the lost Lenore --
+        
+                    For the rare and radiant maiden whom the angels name Lenore --
+        
+                                            Nameless here for evermore.</p>
+            </div>
+    
+    
+    
+            <div class="column cTwo">
+                <p><span class="firstLetter">P</span>resently my soul grew stronger; hesitating then no longer,
+    
+                    "Sir," said I, "or Madam, truly your forgiveness I implore;
+            
+                    But the fact is I was napping, and so gently you came rapping,
+            
+                    And so faintly you came tapping, tapping at my chamber door,
+            
+                    That I scarce was sure I heard you " -- here I opened wide the door; ----
+            
+                                            Darkness there and nothing more.</p>
+        
+                <figure>
+                    <img id='myimg' src="assets/images/raven1.jpg" alt="Raven 1 image" onclick="goHome()" onmouseover="imgHover()" onmouseout="imgLeave()">
+                    <figcaption>Mohammed Alam</figcaption>
+                </figure>
+        
+                <p><span class="firstLetter">D</span>eep into that darkness peering, long I stood there wondering, fearing,
+        
+                    Doubting, dreaming dreams no mortal ever dared to dream before;
+            
+                    But the silence was unbroken, and the darkness gave no token,
+            
+                    And the only word there spoken was the whispered word, "Lenore!"
+            
+                    This I whispered, and an echo murmured back the word, "Lenore!" --
+            
+                                            Merely this, and nothing more.</p>
+        
+            </div>
+    
+    
+    
+            <div class="column cThree">
+                <p><span class="firstLetter">O</span>pen here I flung the shutter, when, with many a flirt and flutter,
+    
+                    In there stepped a stately raven of the saintly days of yore;
+            
+                    Not the least obeisance made he; not an instant stopped or stayed he;
+            
+                    But, with mien of lord or lady, perched above my chamber door --
+            
+                    Perched upon a bust of Pallas just above my chamber door --
+            
+                                            Perched, and sat, and nothing more.</p>
+        
+        
+        
+        
+               <p style="color: blue; font-style: italic;"><span class="firstLetter" >A</span>nd the raven, never flitting, still is sitting, still is sitting
+        
+                On the pallid bust of Pallas just above my chamber door;
+        
+                And his eyes have all the seeming of a demon's that is dreaming,
+        
+                And the lamp-light o'er him streaming throws his shadow on the floor;
+        
+                And my soul from out that shadow that lies floating on the floor
+        
+                                        Shall be lifted -- nevermore!</p>
+
+                <div id="formed">
+                    <div class="formText">
+                        <a onclick="formRed()">The End</a>
+                        <a onclick="showForm()">No Form</a>
+                    </div>
+                    <form action="index.html" id="myForm" name='myForm' onsubmit="validate()">
+                        <input type="radio" name="choice"/>Yes<br/>
+                        <input type="radio" name="choice"/>No<br/>
+                        Your Name: <input type="text">
+                        <input type="submit" value="Submit Your Name" name="yName">
+                        <input type="reset" value="cancel">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

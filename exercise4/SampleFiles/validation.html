@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<!-- demonstration of JavaScript form validation -->
+<head>
+<meta charset="utf-8">
+<title>Form validation</title>
+<script>
+	function validate(){
+		var ret=true;
+		if(document.getElementById('first').value==''){
+			document.getElementById('fname*').style.display='inline';
+			ret=false;
+		}else{
+			document.getElementById('fname*').style.display='none';
+		}
+		
+		if(document.getElementById('last').value==''){
+			document.getElementById('lname*').style.display='inline';
+			ret=false;
+		}else{
+			document.getElementById('lname*').style.display='none';
+		}
+		return ret;
+	}
+</script>
+</head>
+<body>
+<div class="wrapper">
+<form name = "myForm" action="" method="get" onsubmit="return validate();">
+	<fieldset>
+		<legend>Please Register</legend>
+		<input type="text" name="fname" id="first" placeholder="First Name"/>
+			<span id="fname*" style="color:red;display:none;">*</span><br/>
+		<input type="text" name="lname" id="last"  placeholder="Last Name"/>
+			<span id="lname*" style="color:red;display:none;">*</span><br/>
+		<input type="submit" value ="Submit">
+	</fieldset>
+</form>
+</div>
+</body>
+</html>

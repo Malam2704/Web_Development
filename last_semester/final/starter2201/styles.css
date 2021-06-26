@@ -1,0 +1,117 @@
+body {
+    margin: 10px;
+    padding: 0;
+}
+
+/* STEP 6 - replace this comment with the grid-area property definitions for 
+	each of the six areas of the document. look up how to do this on w3schools if neccessary
+*/
+.item1{
+    grid-area: header;
+}
+.item2{
+    grid-area: nav;
+}
+.item3{
+    grid-area: side1;
+}
+.item4{
+    grid-area: side2;
+}
+.item5{
+    grid-area: main;
+}
+.item6{
+    grid-area: footer;
+}
+
+.wrapper {
+    display: grid;
+/*  STEP 7 - replace this comment with the 2-column grid template command */
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1em;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'side1 main'
+    'side2 main'
+    'footer footer';
+    /* STEP - 8 layout the 2-column format with the area names that you setup in step 6*/
+}
+
+.box {
+    background-color: #00b;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: arial;
+}
+
+.nav ul{
+    /*STEP - 9 replace this comment with the approriate command to make this container flex / flexbox */ 
+    display: flex;
+    
+    /* STEP 10 Replace this comment with the the flex Property that sets how flex items are placed in the flex container defining the main axis and the direction to match up with the screenshots. In this case we want our items side by side (NOT stacked) as our navigation has the full width to work with in Figure 1*/
+    flex-direction: row;
+
+    /* STEP 11 Use the flex property to put space around each item so it looks like the screenshot image*/
+    justify-content: space-around;
+    
+    padding-left:0px;
+
+}
+
+/* HINT: This media query shoud activate when screen size is greater than 600px */
+@media only screen and (min-width:600px) {
+    .wrapper {
+        display: grid;
+
+        /* STEP 13 - develop the 3-column grid template*/
+        grid-template-columns: 100px 1fr 3fr;
+        
+        grid-gap: 1em;
+        grid-template-areas: 
+        'header header header'
+        'nav side1 main'
+        'nav side2 main'
+        'footer footer footer';
+        /* STEP 14 - layout the 3-column format with the area names;	*/
+        
+    }
+    
+    .nav ul{
+        
+        /*STEP 15 - (create an override) to change how the navigation itesm are displayed.  The navigation on desktop has moved to a narrow side bar (figure 2) so we now need our items to stack on top of eachother. Override what we did in step 10 with the opposite*/
+        flex-direction: column;   
+    }
+}
+
+/*You shouldnt have to touch any of this CSS below! */
+.main,
+.side1,
+.side2,
+.footer {
+    background-color: #00b;
+    color: #fff;
+    padding: 20px;
+    font-family: arial;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.side1,
+.side2 {
+    background-color: #0d0;
+}

@@ -1,0 +1,427 @@
+/* Basic removal of defualt features and addinhg a body tag to put my
+basis for the creation of the webpage */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#01D6E0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #E6E6E6;
+    
+}
+.topSection{
+    background-image: url("../images/login_background.jpg");
+    box-shadow: 0px 5px 10px #223031;
+}
+.contentSection{
+    
+}
+.mySection{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+.progress-bar {
+    height: 5px;
+    background: #01D6E0;
+    width: 0%;
+}
+
+/* Just a nav guide to flex direte them in a row and increase the
+font size, space them apart evenly and remvoe the list symbol */
+nav{
+    position: fixed;
+    min-width: 100%;
+    margin-bottom: 2em;
+    text-shadow: 5px 4px #000000;
+    box-shadow: 0px 5px 10px #223031;
+    z-index: 1;
+    background-color: #005C61;
+    font-size: large;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+nav li{
+    width: 100%;
+}
+nav li a{
+    text-decoration: none;
+    color: #01D6E0;
+}
+li{
+    padding: .5em;
+}
+
+/* Link features for when the links are beign interacted with the user on */
+a:link{color: #005C61; }
+nav li a:link{color: #01D6E0;}
+a:visited{color: #005C61}
+a:hover{color: lightskyblue;}
+a:active{color: silver;}
+
+
+.titleShadow{
+    text-shadow: 5px 4px #000000;
+    /* margin-bottom: 0.25em; */
+}
+
+/* Naming of the div section detailing my description, I organized it in 
+this format so it looks more organzied */
+
+#myPic{
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #005C61;
+    border-radius: 20px;
+    box-shadow: 20px 20px 20px #223031;
+}
+
+.ht{grid-area: ht; text-align: center; margin-top: 1em;}
+.p1{grid-area: p1;}
+.p2{grid-area: p2;}
+.p3{grid-area: p3;}
+.p4{grid-area: p4;}
+.picture{grid-area: picture; text-align: center;}
+#about{
+    color: #E6E6E6;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-gap: 1em;
+    font-size: 1.2em;
+    grid-template-areas: 
+    ". ht ht ."
+    '. p1 picture .'
+    '. p2 picture .'
+    '. p3 picture .'
+    '. p4 picture .';
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-bottom: 2em;
+}
+
+/* The actual links portion beign indented right so it gives a more cleaner and professional
+look to it. Future descriptions will be added to detail the next websites */
+
+.aProject{
+    text-align: left;
+    font-size: 1.8em;
+    font-weight: 900;
+    cursor: pointer;
+    
+    padding: .5em;
+
+    border: 10px solid #005C61;
+    box-shadow: 15px 10px #223031;
+    border-radius: 20px;
+}
+
+.aProject img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.aProject a{
+    display: block;
+
+    text-decoration: none;
+
+    padding: 1em;
+} 
+
+.projectTitle{ grid-area: pjTitle; 
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    font-size: 4em;}
+.project1{ grid-area: pj1;}
+.project2{ grid-area: pj2;}
+.project3{ grid-area: pj3;}
+.project4{ grid-area: pj4;}
+.project5{ grid-area: pj5;}
+.project6{ grid-area: pj6;}
+.project7{ grid-area: pj7;}
+.project8{ grid-area: pj8;}
+#projects{
+    margin-top: 10em;
+    width: 80%;
+    margin: auto auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    grid-template-areas: 
+    "pjTitle pjTitle pjTitle"
+    'pj1 pj2 pj3'
+    'pj4 pj5 pj6'
+    'pj7 pj8 .';
+}
+
+
+/* ___________________________________________________ */
+/* Footer at the bottom like other websites. */
+footer{
+    margin-top: 2em;
+    font-size: 0.8em;
+    max-width: 100%;
+    padding: 3em;
+    height: auto;
+    background-color: #2F4B5E;
+}
+/* ___________________________________________________ */
+
+/* ___________________________________________________ */
+/* Scroll Wheel */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #24243C;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:#005C61; 
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: skyblue; 
+}
+/* ___________________________________________________ */
+
+/* ___________________________________________________ */
+/* Slide show gallery */
+.slideShowBox{
+    margin-top: 10em;
+    width: 80%;
+    margin: auto auto 5em;
+
+    box-sizing: border-box;
+    padding: 0em .25em;
+    border: 10px solid #005C61;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px #223031;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+  
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+  /* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #005C61;
+    padding: 20px 0px;
+    color: white;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+  
+  /* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+  
+.active,.demo:hover {
+    opacity: 1;
+}
+/* ___________________________________________________ */
+
+@media only screen and (min-width:1400px){
+    nav{
+        font-size: x-large;
+    }
+}
+
+/* Media query to adject the material so it's typically stacking top to bottom in
+-stead of left to right like the usual defaults */
+@media only screen and (max-width:1400px){
+    .contentSection{
+        margin: 0;
+        border: none;
+    }
+
+    .projectTitle{
+        font-size: 2em;
+    }
+    .aProject{
+        padding: unset;
+        font-size: unset;
+    }
+    #projects{
+        margin-top: 10em;
+        width: 80%;
+        margin: auto auto;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        grid-template-areas: 
+        "pjTitle pjTitle"
+        'pj1 pj2'
+        'pj3 pj4'
+        'pj5 pj6'
+        'pj7 pj8';
+    }
+}
+
+@media only screen and (max-width:1000px){
+    /* Removes borders tha causes the width scroll on
+    small screens */
+    #myPic, .picture{
+        border: none;
+    }
+
+    /* Remove all the nav colors when screen is small. */
+    nav{
+        position: unset;
+        background-color:unset;
+        box-shadow: unset;
+        text-shadow: unset;
+    }nav ul{
+        flex-direction: column;
+        align-items: center;
+    }nav ul li{
+        width: 70%;
+        margin: .25em;
+        border: 10px solid #005C61;
+        border-radius: 20px;
+        padding: .25em;
+    }
+    
+    .contentSection{
+        margin: 0;
+        padding: 0;
+    }
+    .picture #myPic{
+        border-radius: 50%;
+    }
+    #about{
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-gap: 2em;
+        font-weight: 900;
+        font-size: large;
+        grid-template-areas: 
+        "ht"
+        'picture'
+        'picture'
+        'picture'
+        'p1'
+        'p2'
+        'p3'
+        'p4';
+    }
+}
+
+@media only screen and (max-width:800px){
+    #projects{
+        margin-top: 10em;
+        width: 80%;
+        margin: auto auto;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+        grid-template-areas: 
+        "pjTitle"
+        'pj1'
+        'pj2'
+        'pj3'
+        'pj4'
+        'pj5'
+        'pj6'
+        'pj7'
+        'pj8';
+    }
+}
+
+@media only screen and (max-width:600px){
+    #projects li{
+        margin-left: 1em;
+    }
+    #projects h2{
+        text-align: center;
+    }
+}
+
+/* Email Form CSS */
+.contactWrapper{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+textarea{
+    resize: vertical;
+}
+.emailprocess .emailform{
+    border: none;
+}
