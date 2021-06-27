@@ -4,9 +4,10 @@ var secondNum = 0;
 var currentOperand;
 
 // Clearing the calculator, not working
-function clear(){
+function clearCalc(){
     currentNum = 0;
-    document.getElementById("screen").innerHTML = 0;
+    firstNum = 0;
+    document.getElementById("screen").innerHTML = "";
 }
 
 // Inputting severl numbers on the calc
