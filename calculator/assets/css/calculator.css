@@ -11,9 +11,13 @@
 }
 
 #screen{
-    height: 30px;
-    width: 404px;
-    border: 5px solid black;
+    width: 387px;
+    padding: 10px;
+
+    font-size: 1.2em;
+    font-weight: 1.2em;
+    
+    border: 3px solid black;
 }
 
 button{
