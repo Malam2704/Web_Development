@@ -3,16 +3,22 @@ var firstNum = 0;
 var secondNum = 0;
 var currentOperand;
 
+// Clearing the calculator, not working
 function clear(){
-    document.getElementById("screen").innerHTML = "";
+    currentNum = 0;
+    document.getElementById("screen").innerHTML = 0;
 }
 
+// Inputting severl numbers on the calc
 function enterNum(value){
     var textSoFar = document.getElementById("screen").innerHTML;
     document.getElementById("screen").innerHTML = textSoFar + value;
     currentNum = textSoFar + value;
 }
 
+// One function for each operand, sets firNum var to whatever is on
+// the screen, then clears screen, settignt he way for the next operand
+// and sets the currentOperand to +,-,*, or /
 function addNum(){
     firstNum = document.getElementById("screen").innerHTML;
     document.getElementById("screen").innerHTML = "";
@@ -33,16 +39,25 @@ function divNum(){
     document.getElementById("screen").innerHTML = "";
     currentOperand = "/";
 }
+function powNum(){
+    firstNum = document.getElementById("screen").innerHTML;
+    document.getElementById("screen").innerHTML = "";
+    currentOperand = "^";
+}
 
+// When the enter key is pressed, checks what the current operand is,
+// and sets the screen innerHTML to whatever the equation is.
 function calcEnter(){
     secondNum = document.getElementById("screen").innerHTML;
     if(currentOperand == "+"){
-        document.getElementById("screen").innerHTML = parseInt(firstNum) + parseInt(secondNum);
+        document.getElementById("screen").innerHTML = parseFloat(firstNum) + parseFloat(secondNum);
     }else if(currentOperand == "-"){
-        document.getElementById("screen").innerHTML = parseInt(firstNum) - parseInt(secondNum);
+        document.getElementById("screen").innerHTML = parseFloat(firstNum) - parseFloat(secondNum);
     }else if(currentOperand == "*"){
-        document.getElementById("screen").innerHTML = parseInt(firstNum) * parseInt(secondNum);
+        document.getElementById("screen").innerHTML = parseFloat(firstNum) * parseFloat(secondNum);
     }else if(currentOperand == "/"){
-        document.getElementById("screen").innerHTML = parseInt(firstNum) / parseInt(secondNum);
+        document.getElementById("screen").innerHTML = parseFloat(firstNum) / parseFloat(secondNum);
+    }else if(currentOperand == "^"){
+        document.getElementById("screen").innerHTML = parseFloat(firstNum) ** parseFloat(secondNum);
     }
 }
