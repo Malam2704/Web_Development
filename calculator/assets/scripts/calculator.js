@@ -3,7 +3,8 @@ var firstNum = 0;
 var secondNum = 0;
 var currentOperand;
 
-// Clearing the calculator, not working
+// Clearing the calculator, renamed clearCalc() from clear(),
+// because clearCalc() is another js function
 function clearCalc(){
     currentNum = 0;
     firstNum = 0;
@@ -45,6 +46,11 @@ function powNum(){
     document.getElementById("screen").innerHTML = "";
     currentOperand = "^";
 }
+function modNum(){
+    firstNum = document.getElementById("screen").innerHTML;
+    document.getElementById("screen").innerHTML = "";
+    currentOperand = "MOD";
+}
 
 // When the enter key is pressed, checks what the current operand is,
 // and sets the screen innerHTML to whatever the equation is.
@@ -60,5 +66,7 @@ function calcEnter(){
         document.getElementById("screen").innerHTML = parseFloat(firstNum) / parseFloat(secondNum);
     }else if(currentOperand == "^"){
         document.getElementById("screen").innerHTML = parseFloat(firstNum) ** parseFloat(secondNum);
+    }else if(currentOperand == "MOD"){
+        document.getElementById("screen").innerHTML = parseFloat(firstNum) % parseFloat(secondNum);
     }
 }
