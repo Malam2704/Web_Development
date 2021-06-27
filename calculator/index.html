@@ -11,23 +11,31 @@
 <body>
     <div id="calculator">
         <div id="screen"></div>
+        
+        <div>
+            <button onclick="clear()">C</button>
+            <button onclick="divNum()">/</button>
+            <button onclick="divNum()">/</button>
+            <button onclick="divNum()">/</button>
+        </div>
+
         <div>
             <button onclick="enterNum(7)">7</button>
             <button onclick="enterNum(8)">8</button>
             <button onclick="enterNum(9)">9</button>
-            <button onclick="enterNum('/')">/</button>
+            <button onclick="mulNum()">x</button>
         </div>
         <div>
             <button onclick="enterNum(4)">4</button>
             <button onclick="enterNum(5)">5</button>
             <button onclick="enterNum(6)">6</button>
-            <button onclick="enterNum('-')">-</button>
+            <button onclick="subNum()">-</button>
         </div>
         <div>
             <button onclick="enterNum(1)">1</button>
             <button onclick="enterNum(2)">2</button>
             <button onclick="enterNum(3)">3</button>
-            <button onclick="enterNum('+')">+</button>
+            <button onclick="addNum()">+</button>
         </div>
         <div>
             <button onclick="enterNum(0)">0</button>
