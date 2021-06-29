@@ -22,9 +22,9 @@
         <div id="about" >
             <h1 class="ht titleShadow">Mohammed Alam</h1>
             <p class="p1">
-                Well, my name is Mohammed Alam, and I'm from New York City.
-                I am currently a Computing Exploration Major at RIT, looking at either Software
-                Engineering, Computer Science, or Web & Mobile Computing.
+                Hello, my name is Mohammed Alam, and I am currently a Software Engineering/ Computer 
+                Science Major at RIT, looking to minor in Business & Web & Mobile Development.
+                I am from the New York City area, where I still reside.
             </p>
             <p class="p2">
                 My hobbies include playing video games, trading in the stock market, and 
@@ -50,7 +50,7 @@
         a goto for my projects in teh remainder fo this course. -->
 
         <div class="slideShowBox mySection" id="slideShowBox">
-            <h1 style="text-align:center" class="titleShadow">View My Featured Projects</h1>
+            <h1 style="text-align:center" class="titleShadow">Videos of My Projects</h1>
 
             <div class="container">
                 <div class="mySlides">

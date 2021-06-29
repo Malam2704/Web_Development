@@ -68,7 +68,7 @@ a:active{color: silver;}
 
 
 .titleShadow{
-    text-shadow: 5px 4px #000000;
+    /* text-shadow: 5px 4px #000000; */
     /* margin-bottom: 0.25em; */
 }
 
@@ -83,7 +83,9 @@ this format so it looks more organzied */
     box-shadow: 20px 20px 20px #223031;
 }
 
-.ht{grid-area: ht; text-align: center; margin-top: 1em;}
+.ht{grid-area: ht; 
+    text-shadow: 2px 5px #005c61; 
+    text-align: center; margin-top: 1em;}
 .p1{grid-area: p1;}
 .p2{grid-area: p2;}
 .p3{grid-area: p3;}
@@ -136,7 +138,6 @@ look to it. Future descriptions will be added to detail the next websites */
 } 
 
 .projectTitle{ grid-area: pjTitle; 
-    text-shadow: 2px 2px #000000;
     text-align: center;
     font-size: 4em;}
 .project1{ grid-area: pj1;}

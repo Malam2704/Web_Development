@@ -1,3 +1,6 @@
+// When the page laods, video player with first video opens
+window.onload = function() {currentSlide(1)}
+
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {scrollFunction()};
 
@@ -9,10 +12,11 @@ function scrollFunction() {
 }
 
 var darkModeCount = 0;
+var element;
 function myFunction() {
-    document.getElementById('darkMode').style.color = 'lightblue';
+    // document.getElementById('darkMode').style.color = 'lightblue';
     if(darkModeCount % 2 == 0){
-        var element = document.body;
+        element = document.body;
         // Changes body color to blakc and text color to black
         element.style.backgroundColor = "black";
         element.style.color = "	#C0C0C0";
@@ -22,7 +26,7 @@ function myFunction() {
         darkModeCount = darkModeCount + 1;
         console.log(darkModeCount);
     }else{
-        var element = document.body;
+        element = document.body;
         // Changes body color to blakc and text color to black
         element.style.backgroundColor = "#01D6E0";
         element.style.color = "	#E6E6E6";
