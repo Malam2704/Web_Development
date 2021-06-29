@@ -27,17 +27,28 @@
                 I am from the New York City area, where I still reside.
             </p>
             <p class="p2">
-                My hobbies include playing video games, trading in the stock market, and 
+                Some of my hobbies include playing researching data, such as population statistics, 
                 doing some general research about a few topics I feel are interesting, such as
-                the elections, infastructure development, and any data that pertains to maps.
-                I have thousands of hours of history on these maps alone. 
+                the U.S. elections, Advancements in modern architecture, and any data that pertains to maps.
+                Infact I have some of my maps published on reddit, with over 100k likes(upvotes).
+                I have thousands of hours of history on viewing maps and time spent on reddit learning new 
+                things.
             </p>
-            <p class="p3">For Programming, I have been doing so since my Sophmore Year fo Highschool
-                Transitioning through the drag and drgo based programs in Scratch, in AP CS to
-                Java in my Software Development Class. I've dabbled in Python the most, and I would
-                say I'm the most confident using Python's Object Oriented framework. 
+            <p class="p3">
+                For Programming, I have been doing so since my Sophmore Year of Highschool
+                Transitioning through the drag and drop based programs in Scratch, in AP CS to
+                Python & Java in Computer Science 1 & 2. 
             </p>
-            <p class="p4">My email is ma3655@rit.edu / ma3655@g.rit.edu , so if you have any questions ask away, or just click the <a href="emailform.php" style="text-decoration: none;">contact form</a></p>
+            <p class="p4">Some of my Java Projects are here <a href="https://github.com/Malam2704/Software-Engineering-Projects" style="text-decoration: none;"> at my Java github repo</a> </p>
+            <p class="p5">Some of my Python Projects are here <a href="https://github.com/Malam2704/Python_Projects" style="text-decoration: none;"> at my Python repo</a> </p>
+            <p class="p6">This Website was created to show off my Web Development projects.
+            The ones made throught HTML,CSS,JS, along with some server-based projects 
+            with PHP, utilizing the MySQL database.</p>
+            <p class="p7">
+                My email is ma3655@rit.edu / ma3655@g.rit.edu , so if you have any questions ask away, 
+                or just click the 
+                <a href="emailform.php" style="text-decoration: none;">contact form</a>
+            </p>
 
             <figure class="picture">
                 <img id='myPic' src="assets/images/my_photo.jpg" width="500" height="600" alt="A picture of myself">

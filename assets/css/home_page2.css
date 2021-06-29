@@ -10,7 +10,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
     color: #005C61;
-    
 }
 .topSection{
     
@@ -34,7 +33,6 @@ nav{
     position: fixed;
     min-width: 100%;
     margin-bottom: 2em;
-    text-shadow: 5px 4px #000000;
     box-shadow: 0px 5px 10px #223031;
     z-index: 1;
     background-color: #005C61;
@@ -62,7 +60,7 @@ li{
 /* Link features for when the links are beign interacted with the user on */
 a:link{color: #005C61; }
 nav li a:link{color: #01D6E0;}
-a:visited{color: #005C61}
+a:visited{color: black; text-shadow: none;}
 a:hover{color: lightskyblue;}
 a:active{color: silver;}
 
@@ -90,6 +88,9 @@ this format so it looks more organzied */
 .p2{grid-area: p2;}
 .p3{grid-area: p3;}
 .p4{grid-area: p4;}
+.p5{grid-area: p5;}
+.p6{grid-area: p6;}
+.p7{grid-area: p7;}
 .picture{grid-area: picture; text-align: center;}
 #about{
     color: #E6E6E6;
@@ -102,7 +103,10 @@ this format so it looks more organzied */
     '. p1 picture .'
     '. p2 picture .'
     '. p3 picture .'
-    '. p4 picture .';
+    '. p4 picture .'
+    '. p5 picture .'
+    '. p6 picture .'
+    '. p7 picture .';
     padding-top: 3em;
     padding-bottom: 3em;
     margin-bottom: 2em;
@@ -379,7 +383,10 @@ footer{
         'p1'
         'p2'
         'p3'
-        'p4';
+        'p4'
+        'p5'
+        'p6'
+        'p7';
     }
 }
 
