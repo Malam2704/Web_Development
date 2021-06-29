@@ -143,71 +143,17 @@
             </div>
         </div>
 
-        <div id="individual" class="mySection">
-            <h2>My Featured Projects</h2>
-            <ol>
-                <li ><a href="altgroup/index.php">The CSS Survival Guide (Non-SQL edition)</a></li>
-                <li ><a href="ISTE240-Group-Project/index.php">The CSS Survival Guide</a> - <a href="#slideShowBox"><em>(Video shown above)</em></a>, a quick guide to help users learn CSS or get a resfresher and immedietly start programming.
-                    <ul>
-                        <li>We used basic Web Development principles with reponsive design to build a layout simple for users to know where they are and what to learn.</li>
-                        <li>We also used Wireframes with Figma, and CSS transitions for added Pazazz.</li>
-                        <li>JavaScript was used to make our side anv where users can skip each section in a chapter, and to validate our comments.</li>
-                        <li>PHP, was used to modularize our 30 pages, and send our info packets into our SQL database.</li>
-                        <li>MySQL was used to record data for our login so users have to create an account to access our site.</li>
-                        <li>APIs were used such as ReCaptcha.</li>
-                    </ul>
-                </li>
-                <li ><a href="nycproject/index.php">Welcome to NYC (Non-SQL edition)</a></li>
-                <li ><a href="ISTE-INDIVIDUAL-PROJECT/index.php">Welcome to New York City</a> - <a href="#slideShowBox"><em>(Video shown above)</em></a>
-                    <ul>
-                        <li>DHTML & JavaScript used to change color of webpages, and validate the forms.</li>
-                        <li>APIs used - OpenWeather for live weather updates of NYC, Google Maps to show the locations, and ReCaptcha for form submission</li>
-                        <li>PHP to modularize all pages.</li>
-                        <li>MySQL to record comments.</li>
-                    </ul>    
-                </li>
-                <li ><a href="newGame/index.html">Democrat or Republican, The Game</a> - A game I made where users guess which political party a politican is a part of, this was inpsired by
-                    the fact that we have stereotypical identities for each Political Party.</li>
-                <li ><a href="last_semester/project3/index.html">My CyberPunk 2077 Website</a> - I created a website to showcase the release of CyberPunk 2077 and tell a user what it's all about</li>
-                <li ><a href="last_semester/project2/index.html">A Guide About All The Fake News</a> - A website to introduce users on the plethora of fake news plagueing society, and why it's so harmful, and mopre importantly, how to avoid it.</li>
-                <li ><a href="last_semester/midterm2201/index.html"> Welcome to Wyoming</a> - A guide about visitng the state of Wyoming and all the natural wonders hidden inside.</li>
-            </ol>
+        <div id="projects" class="mySection">
+            <h2 class="projectTitle">My Featured Projects</h2>
+            <div class="project1 aProject" onclick="location.href='altgroup/index.php'" > <img src="assets/images/CroppedCommentSectionGroup.jpg"> <a href="altgroup/index.php">The CSS Survival Guide <br> (Non-SQL edition)</a></div>
+            <div class="project2 aProject" onclick="location.href='ISTE240-ISTE240-Group-Project/index.php'" > <img src="assets/images/CroppedGroupLogin.jpg"> <a href="ISTE240-Group-Project/index.php">The CSS Survival Guide</a></div>
+            <div class="project3 aProject" onclick="location.href='nycproject/index.php'" > <img src="assets/images/CroppedNonSQLIP.jpg"> <a href="project1/index.php">Welcome to NYC <br> (Non-SQL edition)</a></div>
+            <div class="project4 aProject" onclick="location.href='ISTE-ISTE-INDIVIDUAL-PROJECT/index.php'" > <img src="assets/images/CroppedIndividualPorject.jpg"> <a href="ISTE-INDIVIDUAL-PROJECT/index.php">Welcome to New York City</a></div>
+            <div class="project5 aProject" onclick="location.href='newGame/index.html'" > <img src="assets/images/CroppedGTP.jpg"> <a href="newGame/index.html">Democrat or Republican, The Game</a></div>
+            <div class="project6 aProject" onclick="location.href='last_semester/project3/index.html'" > <img src="assets/images/CroppedCyberPunk.jpg"> <span> <a href="last_semester/project3/index.html">My CyberPunk 2077 Website</a> <span></div>
+            <div class="project7 aProject" onclick="location.href='last_semester/project2/index.html'" > <img src="assets/images/Croppedfakenews.jpg"> <span> <a href="last_semester/project2/index.html">A Guide About All The Fake News</a> </span></div>
+            <div class="project8 aProject" onclick="location.href='last_semester/midterm2201/index.html'" > <img src="assets/images/CroppedWyomingReport.jpg"> <span> <a href="last_semester/midterm2201/index.html"> Welcome to Wyoming</a> </span></div>
         </div>
-
-        <div id="other" class="mySection">
-            <h2>Other Published Projects</h2>
-            <ol>
-                <li ><a href="final/startfiles-sec2/index.php"> Final Practical</a> - my final exam for the ISTE 240 class, where I have to make a webpage for the South Harmon Institute of Technology using MySQL, PHP, JavaScript, HTML, and CSS.</li>
-                <li ><a href="last_semester/project1/index.html">My Extended Resume</a> - My resume and other information that is an extension of my resume and showcases what I've done, for my work experience.</li>
-                <li ><a href="last_semester/pages/jojodoss/index.html"> Jojodoss's Webpage (In Progress)</a> - A introduction to my friend's Youtube Channel</li>
-                <li ><a href="last_semester/pages/pokegar/index.html"> Pokegar's Webpage (In Progress)</a> - A introduction to my other friend's Youtube Channel</li>
-                <li ><a href="last_semester/pages/atlantean_Empire/index.html"> The Atlantean Empire (In Progress)</a> - The video game website towards one of my organizations/guild's in this game AQW</li>
-                <!-- <li ><a href="last_semester/myblog/index.html"> 1 State, 2 Stae, Red State, Blue State</a> - My Political blog which I update weekly. After the 2020 election, I was curious in the
-                    world of politics which I always ignored because I didn't undertand it. After the ruish of the 2020 elections, Politics have been one of my key interests, and I have spent
-                    my free time researchign details, the most famous of which are Demogrpahi and Political shifts found in the nation.</li> -->
-            </ol>
-        </div>
-
-        <!-- <div id="group" class="mySection">
-            <h2>Group Projects</h2>
-            <ol>
-                
-            </ol>
-        </div> -->
-
-        <!-- <div id="exercises" class="mySection">
-            <h2>Exercises</h2>
-            <ol>
-                <li ><a href="#navigation">Exercise 1</a> - My homepage website, literally this one you're looking at.</li>
-                <li ><a href="exercise2/index.html">Exercise 2</a> - This is an excercise inclusing responsive web design, a placement of images, positions, and transitions</li>
-                <li ><a href="exercise3/index.html">Exercise 3</a> - Forms example of creation</li>
-                <li ><a href="exercise4/EX04/EX04.html">Exercise 4</a> - Forms and Javascript exercise</li>
-                <li ><a href="exercise5/EX05/EX05.html">Exercise 5</a> - JavaScript part 2, where we delve into deeper topics such as simplifying the document calss and nodes.</li>
-                <li ><a href="exercise6phpFormsStart/orderform.php">Exercise 6</a> - PHP Pizza Ordering Form</li>
-                <li ><a href="http://solace.ist.rit.edu/~ma3655/240/exercise7/contact.php">Exercise 7</a> - Essentially a comment section made with the SQL database where your info is recorded and printed out in the comment section</li>
-                <li ><a href="dbInsertStart/phpSelect.php"> PHP Data Selection Demo</a> - Where we can choose a pet of a type of fish and display it on an HTML table</li>
-            </ol>
-        </div> -->
     </div>
 
 <?php

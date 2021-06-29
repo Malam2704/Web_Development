@@ -9,12 +9,11 @@ body{
     background-color:#01D6E0;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    color: #E6E6E6;
+    color: #005C61;
     
 }
 .topSection{
-    background-image: url("../images/login_background.jpg");
-    box-shadow: 0px 5px 10px #223031;
+    
 }
 .contentSection{
     
