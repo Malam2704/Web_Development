@@ -12,27 +12,22 @@ function scrollFunction() {
 }
 
 var darkModeCount = 0;
-var element;
-function myFunction() {
-    // document.getElementById('darkMode').style.color = 'lightblue';
-    if(darkModeCount % 2 == 0){
-        element = document.body;
-        // Changes body color to blakc and text color to black
-        element.style.backgroundColor = "black";
-        element.style.color = "	#C0C0C0";
-        element.getElementById('about').style = "box-shadow: unset";
-        element.getElementsByClassName('topSection')[0].style = "box-shadow: unset"
-        element.getElementById('slideShowBox').style = "box-shadow: unset";
-        darkModeCount = darkModeCount + 1;
-        console.log(darkModeCount);
-    }else{
-        element = document.body;
-        // Changes body color to blakc and text color to black
-        element.style.backgroundColor = "#01D6E0";
-        element.style.color = "	#E6E6E6";
-        darkModeCount = darkModeCount + 1;
-        console.log(darkModeCount);
-    }   
+function darkMode() {
+  document.body.classList.toggle("dark-mode");
+
+  if(darkModeCount % 2 == 0){
+    for(var ap = 0; ap<document.body.getElementsByClassName('aProject').length; ap++){
+      document.body.getElementsByClassName('aProject')[ap].style = "box-shadow: unset";
+    }
+    document.body.getElementById('myPic').style = 'box-shadow: unset';
+    darkModeCount++;
+  }else{
+    for(var ap = 0; ap<document.body.getElementsByClassName('aProject').length; ap++){
+      document.body.getElementsByClassName('aProject')[ap].style = "box-shadow: 15px 10px #223031";
+    }
+    document.body.getElementById('myPic').style = 'box-shadow: 20px 20px 20px #223031';
+    darkModeCount++;
+  }
 }
 
 function addTextBox() {

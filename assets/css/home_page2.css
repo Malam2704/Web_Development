@@ -11,12 +11,13 @@ body{
     font-size: 1.2em;
     color: #005C61;
 }
-.topSection{
-    
+
+/* This is the dark Mode toggles by darkMode() in js */
+.dark-mode {
+    background-color: black;
+    color: white;
 }
-.contentSection{
-    
-}
+
 .mySection{
     margin-top: 1.5em;
     margin-bottom: 1.5em;
