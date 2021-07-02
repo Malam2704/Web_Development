@@ -19,13 +19,21 @@ function darkMode() {
     for(var ap = 0; ap<document.body.getElementsByClassName('aProject').length; ap++){
       document.body.getElementsByClassName('aProject')[ap].style = "box-shadow: unset";
     }
-    document.body.getElementById('myPic').style = 'box-shadow: unset';
+    for(var alinks = 0; alinks<document.body.getElementsByTagName('a').length; alinks++){
+        document.body.getElementsByTagName('a')[alinks].style.color = 'silver';
+    }
+    document.body.style.backgroundColor = 'black';
+    document.getElementById('myPic').style = 'box-shadow: unset';
     darkModeCount++;
   }else{
-    for(var ap = 0; ap<document.body.getElementsByClassName('aProject').length; ap++){
-      document.body.getElementsByClassName('aProject')[ap].style = "box-shadow: 15px 10px #223031";
+    for(var ab = 0; ab<document.body.getElementsByClassName('aProject').length; ab++){
+      document.body.getElementsByClassName('aProject')[ab].style = "box-shadow: 15px 10px #223031";
     }
-    document.body.getElementById('myPic').style = 'box-shadow: 20px 20px 20px #223031';
+    for(var alinks = 0; alinks<document.body.getElementsByTagName('a').length; alinks++){
+        document.body.getElementsByTagName('a')[alinks].style.color = '#005C61';
+    }
+    document.body.style.backgroundColor = '#01D6E0';
+    document.getElementById('myPic').style = 'box-shadow: 20px 20px 20px #223031';
     darkModeCount++;
   }
 }
