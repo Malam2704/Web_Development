@@ -19,7 +19,7 @@ function darkMode() {
     for(let ap = 0; ap<document.body.getElementsByClassName('aProject').length; ap++){
       document.body.getElementsByClassName('aProject')[ap].style = "box-shadow: unset";
     }
-    for(let alinks = 3; alinks<document.body.getElementsByTagName('a').length; alinks++){
+    for(let alinks = 4; alinks<document.body.getElementsByTagName('a').length; alinks++){
         document.body.getElementsByTagName('a')[alinks].style.color = 'dark-grey';
     }
     document.body.style.backgroundColor = 'black';
@@ -30,7 +30,7 @@ function darkMode() {
     for(let ab = 0; ab<document.body.getElementsByClassName('aProject').length; ab++){
       document.body.getElementsByClassName('aProject')[ab].style = "box-shadow: 15px 10px #223031";
     }
-    for(let alinks = 3; alinks<document.body.getElementsByTagName('a').length; alinks++){
+    for(let alinks = 4; alinks<document.body.getElementsByTagName('a').length; alinks++){
         document.body.getElementsByTagName('a')[alinks].style.color = '#005C61';
     }
     document.body.style.backgroundColor = '#01D6E0';
