@@ -1,56 +1,104 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(#e66465, #9198e5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: #E6E6E6;
+}
+
+.title{
+    margin-top: 1em;
+    margin-right: auto; 
+    margin-left: auto; 
+    width: fit-content;
+    font-size: 4em;
+    text-shadow: 5px 4px #000000;
+    
+    text-align: center;
 }
 
 #calculator{
-    width: 30em;
-    margin-top: 16em;
+    width: fit-content;
+    margin: 10em;
     margin-left: auto;
     margin-right: auto;
+
+    border: 5px solid #FF5700;
+    border-radius: 10px;
 }
 
 #screen{
-    width: 387px;
     height: 20px;
     padding: 10px;
 
     font-size: 1.2em;
-    font-weight: 1.2em;
-    
+    margin: 5px 5px 0px 5px;
+
     border: 3px solid black;
 }
 
-button{
-    width: 100px;
-    height: 50px;
+footer{
+    opacity: 0.5;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 1em;
 }
-.longButton{
-    width: 204px;
-}
+
+
 /* ___________________________________________________ */
 /* The button styling such as the Add to List for comments, 
 and taking the quiz. Auto style to make them look nice and active and hovers
 for good UI experience. */
 button {
+    width: 8em;
+    height: 50px;
     background-color: #232126;
     color: #E6E6E6;
     text-align: center;
-    /* Up Right Down Left */
-    margin: 5px 0px 5px 0px;
+    margin: 5px 5px 5px 5px;
     cursor: pointer;
-    border: 2px solid #819c27;
+    border: 3px solid #FF5700;
+    border-radius: 10px;
     text-align: center;
 }
 button:hover{
-    border: 2px solid #FF5700;
-    color: #FF5700;
-    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    border: 3px solid #9198e5;
+    color: #9198e5;
 }
 
 button:active{
-    border: 2px solid #396BF7;
+    border: 3px solid #396BF7;
     color: #396BF7;
-    font-weight: bold;
 }
-  /* ___________________________________________________ */
+/* ___________________________________________________ */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #9198e5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FF5700;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media only screen and (max-width:600px){
+
+    .title{
+        font-size: 3em;
+    }
+}

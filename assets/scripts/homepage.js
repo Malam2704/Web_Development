@@ -20,10 +20,11 @@ function darkMode() {
       document.body.getElementsByClassName('aProject')[ap].style = "box-shadow: unset";
     }
     for(var alinks = 0; alinks<document.body.getElementsByTagName('a').length; alinks++){
-        document.body.getElementsByTagName('a')[alinks].style.color = 'silver';
+        document.body.getElementsByTagName('a')[alinks].style.color = 'dark-grey';
     }
     document.body.style.backgroundColor = 'black';
     document.getElementById('myPic').style = 'box-shadow: unset';
+    document.getElementById('slideShowBox').style = 'box-shadow: unset';
     darkModeCount++;
   }else{
     for(var ab = 0; ab<document.body.getElementsByClassName('aProject').length; ab++){
@@ -34,6 +35,7 @@ function darkMode() {
     }
     document.body.style.backgroundColor = '#01D6E0';
     document.getElementById('myPic').style = 'box-shadow: 20px 20px 20px #223031';
+    document.getElementById('slideShowBox').style = 'box-shadow: 0px 5px 10px #223031';
     darkModeCount++;
   }
 }

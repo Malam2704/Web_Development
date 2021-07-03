@@ -70,6 +70,7 @@ function getPoliticianSource(){
     return politicianSource;
 }
 
+var nextPicCount = 0;
 function nextPic(party){
     // setTimeout(function() {console.log("Time Delay for next Picture")}, 2500);
     // document.getElementById('currentCaption').style = "color: unset; transition: 0.3s";
@@ -84,6 +85,26 @@ function nextPic(party){
     //        break;
     //    }
     // }
+    var myScores = document.body.getElementsByClassName('scoreCountSWection');
+    document.body.classList.toggle('changeBackground');
+    if(nextPicCount % 2 == 0){
+        document.body.getElementsByTagName('footer')[0].style = 'background-image: linear-gradient(-45deg, blue 0 50%, red 50% 100%);';
+
+        for(let sC = 0; sC < myScores.length; sC++){
+            myScores[sC].style.backgroundColor = 'blue';
+        }
+
+        nextPicCount++;
+    }else{
+        document.body.getElementsByTagName('footer')[0].style = 'background-image: linear-gradient(-45deg, red 0 50%, blue 50% 100%);';
+        
+        for(let sC = 0; sC < myScores.length; sC++){
+            myScores[sC].style.backgroundColor = 'red';
+        }
+        
+        nextPicCount++;
+    }
+    
 
     // the current img src is the new index politician's src, and current caption is new index politician's name
     var currentSource = getPoliticianSource();
