@@ -16,10 +16,10 @@ function darkMode() {
   document.body.classList.toggle("dark-mode");
 
   if(darkModeCount % 2 == 0){
-    for(var ap = 0; ap<document.body.getElementsByClassName('aProject').length; ap++){
+    for(let ap = 0; ap<document.body.getElementsByClassName('aProject').length; ap++){
       document.body.getElementsByClassName('aProject')[ap].style = "box-shadow: unset";
     }
-    for(var alinks = 0; alinks<document.body.getElementsByTagName('a').length; alinks++){
+    for(let alinks = 3; alinks<document.body.getElementsByTagName('a').length; alinks++){
         document.body.getElementsByTagName('a')[alinks].style.color = 'dark-grey';
     }
     document.body.style.backgroundColor = 'black';
@@ -27,10 +27,10 @@ function darkMode() {
     document.getElementById('slideShowBox').style = 'box-shadow: unset';
     darkModeCount++;
   }else{
-    for(var ab = 0; ab<document.body.getElementsByClassName('aProject').length; ab++){
+    for(let ab = 0; ab<document.body.getElementsByClassName('aProject').length; ab++){
       document.body.getElementsByClassName('aProject')[ab].style = "box-shadow: 15px 10px #223031";
     }
-    for(var alinks = 0; alinks<document.body.getElementsByTagName('a').length; alinks++){
+    for(let alinks = 3; alinks<document.body.getElementsByTagName('a').length; alinks++){
         document.body.getElementsByTagName('a')[alinks].style.color = '#005C61';
     }
     document.body.style.backgroundColor = '#01D6E0';
