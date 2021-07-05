@@ -42,9 +42,9 @@ scene("game", ({ level, score }) => {
         [
             '     =   = ===== =   = ===== =   = =   = ===== ====  = =====  =   = ===== ===== = =====',
             '     == == =   = =   = =   = == == == == =     =   = = ==     == == =   = =   = = =   =',
-            '     = = = =   = ===== ===== = = = = = = ===== =   =     ==   = = = ===== ====  = =   =',
-            '     =   = =   = =   = =   = =   = =   = =     =   =      ==  =   = =   = ===   = =   =',
-            '     =   = ===== =   = =   = =   = =   = ===== =====   =====  =   = =   = =  == = =====',
+            '     = = = =   = ===== ===== = = = = = = ===== =   =     ==   = = = ===== ===   = =   =',
+            '     =   = =   = =   = =   = =   = =   = =     =   =      ==  =   = =   = ====  = =   =',
+            '     =   = ===== =   = =   = =   = =   = ===== =====   =====  =   = =   = =   = = =====',
             '                                                                                       ',
             '                                                                                       ',
             '                                                                                       ',
@@ -102,15 +102,15 @@ scene("game", ({ level, score }) => {
     const gameLevel = addLevel(maps[level], levelCfg)
 
     const scoreLabel = add([
-        text(score),
-        pos(30, 6),
+        text("Score: " + score),
+        pos(0, 16),
         layer('ui'),
         {
             value: score,
         }
     ])
 
-    add([text('level ' + parseInt(level + 1)), pos(40, 6)])
+    add([text('Level ' + parseInt(level + 1)), pos(0, 6)])
 
     function big() {
         let timer = 0
@@ -178,7 +178,7 @@ scene("game", ({ level, score }) => {
     player.collides('coin', (c) => {
         destroy(c)
         scoreLabel.value++;
-        scoreLabel.text = scoreLabel.value;
+        scoreLabel.text = "Score: " + scoreLabel.value;
     })
 
     action('dangerous', (d) => {

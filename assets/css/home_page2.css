@@ -151,14 +151,16 @@ look to it. Future descriptions will be added to detail the next websites */
 .projectTitle{ grid-area: pjTitle; 
     text-align: center;
     font-size: 4em;}
-.project1{ grid-area: pj1;}
-.project2{ grid-area: pj2;}
-.project3{ grid-area: pj3;}
-.project4{ grid-area: pj4;}
-.project5{ grid-area: pj5;}
-.project6{ grid-area: pj6;}
-.project7{ grid-area: pj7;}
-.project8{ grid-area: pj8;}
+.project01{ grid-area: pj01;}
+.project02{ grid-area: pj02;}
+.project03{ grid-area: pj03;}
+.project04{ grid-area: pj04;}
+.project05{ grid-area: pj05;}
+.project06{ grid-area: pj06;}
+.project07{ grid-area: pj07;}
+.project08{ grid-area: pj08;}
+.project09{ grid-area: pj09;}
+.project10{ grid-area: pj10;}
 #projects{
     margin-top: 10em;
     width: 80%;
@@ -169,9 +171,10 @@ look to it. Future descriptions will be added to detail the next websites */
     grid-gap: 2em;
     grid-template-areas: 
     "pjTitle pjTitle pjTitle"
-    'pj1 pj2 pj3'
-    'pj4 pj5 pj6'
-    'pj7 pj8 .';
+    'pj01 pj02 pj03'
+    'pj04 pj05 pj06'
+    'pj07 pj08 pj09'
+    'pj10 . .';
 }
 
 
@@ -342,10 +345,11 @@ footer{
         grid-gap: 2em;
         grid-template-areas: 
         "pjTitle pjTitle"
-        'pj1 pj2'
-        'pj3 pj4'
-        'pj5 pj6'
-        'pj7 pj8';
+        'pj01 pj02'
+        'pj03 pj04'
+        'pj05 pj06'
+        'pj07 pj08'
+        'pj09 pj10';
     }
 }
 
@@ -413,14 +417,16 @@ footer{
         grid-gap: 2em;
         grid-template-areas: 
         "pjTitle"
-        'pj1'
-        'pj2'
-        'pj3'
-        'pj4'
-        'pj5'
-        'pj6'
-        'pj7'
-        'pj8';
+        'pj01'
+        'pj02'
+        'pj03'
+        'pj04'
+        'pj05'
+        'pj06'
+        'pj07'
+        'pj08'
+        'pj09'
+        'pj10';
     }
 }
 
