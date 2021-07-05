@@ -8,6 +8,9 @@ kaboom({
 
 const MOVE_SPEED = 120
 const JUMP_FORCE = 420
+let CURRENT_JUMP_FORCE = JUMP_FORCE
+const BIG_JUMP_FORCE = 550
+const ENEMY_SPEED = 20
 
 loadRoot('https://i.imgur.com/')
 loadSprite('coin', 'wbKxhcd.png')
@@ -52,6 +55,13 @@ scene("game", () => {
         ')': [sprite('pipe-bottom-right'), solid(), scale(0.5)],
         '-': [sprite('pipe-top-left'), solid(), scale(0.5), 'pipe'],
         '+': [sprite('pipe-top-right'), solid(), scale(0.5), 'pipe'],
+        '^': [sprite('evil-shroom'), solid(), 'dangerous'],
+        '#': [sprite('mushroom'), solid(), 'mushroom', body()],
+        // '!': [sprite('blue-block'), solid(), scale(0.5)],
+        // '£': [sprite('blue-brick'), solid(), scale(0.5)],
+        // 'z': [sprite('blue-evil-shroom'), solid(), scale(0.5), 'dangerous'],
+        // '@': [sprite('blue-surprise'), solid(), scale(0.5), 'coin-surprise'],
+        // 'x': [sprite('blue-steel'), solid(), scale(0.5)],
     }
 
     const gameLevel = addLevel(map, levelCfg)
@@ -105,12 +115,43 @@ scene("game", () => {
         origin('bot')
     ])
 
+    action('mushroom', (m) => {
+        m.move(20, 0)
+    })
+
+    // If I bump on a  surprise block
     player.on("headbump", (obj) => {
         if (obj.is('coin-surprise')) {
             gameLevel.spawn('$', obj.gridPos.sub(0, 1))
             destroy(obj)
             gameLevel.spawn('}', obj.gridPos.sub(0, 0))
         }
+        if (obj.is('mushroom-surprise')) {
+            gameLevel.spawn('#', obj.gridPos.sub(0, 1))
+            destroy(obj)
+            gameLevel.spawn('}', obj.gridPos.sub(0, 0))
+        }
+    })
+
+    // When you touch a shroom, the function biggify() runs
+    player.collides('mushroom', (m) => {
+        destroy(m)
+        player.biggify(6)
+    })
+
+    // When you touch a coin your score increases
+    player.collides('coin', (c) => {
+        destroy(c)
+        scoreLabel++;
+        scoreLabel.text = scoreLabel.value;
+    })
+
+    action('dangerous', (d) => {
+        d.move(-ENEMY_SPEED, 0)
+    })
+
+    player.collides('dangerous', () => {
+        go('lose', { score: scoreLabel.value })
     })
 
     keyDown('left', () => {
@@ -124,9 +165,13 @@ scene("game", () => {
 
     keyPress('space', () => {
         if (player.grounded()) {
-            player.jump(JUMP_FORCE)
+            player.jump(CURRENT_JUMP_FORCE)
         }
     })
 });
+
+scene('lose', ({ score }) => {
+    add([text(score, 32), origin('center'), pos(width() / 2, height() / 2)])
+})
 
 start("game")
