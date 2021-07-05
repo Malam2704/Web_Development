@@ -15,7 +15,7 @@ loadSprite('evil-shroom', 'KPO3fR9.png')
 loadSprite('brick', 'pogC9x5.png')
 loadSprite('block', 'M6rwarW.png')
 loadSprite('mario', 'Wb1qfhK.png')
-loadSprite('mario-reverse', 'E:/Web_Development/Mario/images/reverse_mario.jpg')
+// loadSprite('mario-reverse', 'E:/Web_Development/Mario/images/reverse_mario.jpg')
 loadSprite('mushroom', '0wMd92p.png')
 loadSprite('surprise', 'gesQ1KP.png')
 loadSprite('unboxed', 'bdrLpi6.png')
@@ -67,13 +67,51 @@ scene("game", () => {
 
     add([text('level ' + 'test', pos(4, 6))])
 
+    function big() {
+        let timer = 0
+        let isBig = false
+        return {
+            update() {
+                if (isBig) {
+                    CURRENT_JUMP_FORCE = BIG_JUMP_FORCE
+                    timer -= dt()
+                    if (timer <= 0) {
+                        this.smallify()
+                    }
+                }
+            },
+            isBig() {
+                return isBig
+            },
+            smallify() {
+                this.scale = vec2(1)
+                CURRENT_JUMP_FORCE = JUMP_FORCE
+                timer = 0
+                isBig = false
+            },
+            biggify(time) {
+                this.scale = vec2(2)
+                timer = time
+                isBig = true
+            }
+        }
+    }
+
     const player = add([
         sprite('mario'), solid(),
         pos(50, 0),
         body(),
+        big(),
         origin('bot')
     ])
 
+    player.on("headbump", (obj) => {
+        if (obj.is('coin-surprise')) {
+            gameLevel.spawn('$', obj.gridPos.sub(0, 1))
+            destroy(obj)
+            gameLevel.spawn('}', obj.gridPos.sub(0, 0))
+        }
+    })
 
     keyDown('left', () => {
         player.move(-MOVE_SPEED, 0)
