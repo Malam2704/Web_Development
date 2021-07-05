@@ -11,6 +11,8 @@ const JUMP_FORCE = 420
 let CURRENT_JUMP_FORCE = JUMP_FORCE
 const BIG_JUMP_FORCE = 550
 const ENEMY_SPEED = 20
+let isJumping = true;
+const FALL_DEATH = 400
 
 loadRoot('https://i.imgur.com/')
 loadSprite('coin', 'wbKxhcd.png')
@@ -27,7 +29,7 @@ loadSprite('pipe-top-right', 'hj2GK4n.png')
 loadSprite('pipe-bottom-left', 'c1cYSbt.png')
 loadSprite('pipe-bottom-right', 'nqQ79eI.png')
 
-scene("game", () => {
+scene("game", ({ level, score }) => {
     layers(['bg', 'obj', 'ui'], 'obj')
 
     const map = [
@@ -67,15 +69,15 @@ scene("game", () => {
     const gameLevel = addLevel(map, levelCfg)
 
     const scoreLabel = add([
-        text('test'),
+        text(score),
         pos(30, 6),
         layer('ui'),
         {
-            value: 'test',
+            value: score,
         }
     ])
 
-    add([text('level ' + 'test', pos(4, 6))])
+    add([text('level ' + parseInt(level + 1)), pos(40, 6)])
 
     function big() {
         let timer = 0
@@ -142,7 +144,7 @@ scene("game", () => {
     // When you touch a coin your score increases
     player.collides('coin', (c) => {
         destroy(c)
-        scoreLabel++;
+        scoreLabel.value++;
         scoreLabel.text = scoreLabel.value;
     })
 
@@ -150,8 +152,28 @@ scene("game", () => {
         d.move(-ENEMY_SPEED, 0)
     })
 
-    player.collides('dangerous', () => {
-        go('lose', { score: scoreLabel.value })
+    player.collides('dangerous', (d) => {
+        if (isJumping) {
+            destroy(d)
+        } else {
+            go('lose', { score: scoreLabel.value })
+        }
+    })
+
+    player.action(() => {
+        camPos(player.pos)
+        if (player.pos.y >= FALL_DEATH) {
+            go('lose', { score: scoreLabel.value })
+        }
+    })
+
+    player.collides('left', () => {
+        keyPress('down', () => {
+            go('game', {
+                level: (level + 1),
+                score: scoreLabel.value
+            })
+        })
     })
 
     keyDown('left', () => {
@@ -163,8 +185,15 @@ scene("game", () => {
         player.move(MOVE_SPEED, 0)
     })
 
+    player.action(() => {
+        if (player.grounded()) {
+            isJumping = false
+        }
+    })
+
     keyPress('space', () => {
         if (player.grounded()) {
+            isJumping = true
             player.jump(CURRENT_JUMP_FORCE)
         }
     })
@@ -174,4 +203,4 @@ scene('lose', ({ score }) => {
     add([text(score, 32), origin('center'), pos(width() / 2, height() / 2)])
 })
 
-start("game")
+start("game", { level: 0, score: 0 })
