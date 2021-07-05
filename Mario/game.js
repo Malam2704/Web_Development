@@ -1,3 +1,11 @@
+/* 
+Goals:
+- Make a Scene with a start up screen where user clicks play
+- Another starter screen so the user name is entered
+- Make the Score and Level sticky
+- Change A and S keys so that holding is increasing speed not press
+*/
+
 kaboom({
     global: true,
     fullscreen: true,
@@ -7,6 +15,7 @@ kaboom({
 })
 
 const MOVE_SPEED = 120
+let CURRENT_MOVE_SPEED = MOVE_SPEED
 const JUMP_FORCE = 420
 let CURRENT_JUMP_FORCE = JUMP_FORCE
 const BIG_JUMP_FORCE = 550
@@ -20,7 +29,6 @@ loadSprite('evil-shroom', 'KPO3fR9.png')
 loadSprite('brick', 'pogC9x5.png')
 loadSprite('block', 'M6rwarW.png')
 loadSprite('mario', 'Wb1qfhK.png')
-// loadSprite('mario-reverse', 'E:/Web_Development/Mario/images/reverse_mario.jpg')
 loadSprite('mushroom', '0wMd92p.png')
 loadSprite('surprise', 'gesQ1KP.png')
 loadSprite('unboxed', 'bdrLpi6.png')
@@ -42,8 +50,8 @@ scene("game", ({ level, score }) => {
         [
             '     =   = ===== =   = ===== =   = =   = ===== ====  = =====  =   = ===== ===== = =====',
             '     == == =   = =   = =   = == == == == =     =   = = ==     == == =   = =   = = =   =',
-            '     = = = =   = ===== ===== = = = = = = ===== =   =     ==   = = = ===== ===   = =   =',
-            '     =   = =   = =   = =   = =   = =   = =     =   =      ==  =   = =   = ====  = =   =',
+            '     = = = =   = ===== ===== = = = = = = ===== =   =     ==   = = = ===== ===== = =   =',
+            '     =   = =   = =   = =   = =   = =   = =     =   =      ==  =   = =   = =  =  = =   =',
             '     =   = ===== =   = =   = =   = =   = ===== =====   =====  =   = =   = =   = = =====',
             '                                                                                       ',
             '                                                                                       ',
@@ -193,12 +201,13 @@ scene("game", ({ level, score }) => {
         }
     })
 
-    player.action(() => {
-        camPos(player.pos.x + 100, player.pos.y - 100)
-        if (player.pos.y >= FALL_DEATH) {
-            go('lose', { score: scoreLabel.value })
-        }
-    })
+    // Placed into the play.action below
+    // player.action(() => {
+    //     camPos(player.pos.x + 100, player.pos.y - 100)
+    //     if (player.pos.y >= FALL_DEATH) {
+    //         go('lose', { score: scoreLabel.value })
+    //     }
+    // })
 
     player.collides('pipe', () => {
         keyPress('down', () => {
@@ -209,16 +218,26 @@ scene("game", ({ level, score }) => {
         })
     })
 
+    keyPress('a', () => {
+        CURRENT_MOVE_SPEED = MOVE_SPEED * 2
+    })
+    keyDown('s', () => {
+        CURRENT_MOVE_SPEED = MOVE_SPEED
+    })
+
     keyDown('left', () => {
-        player.move(-MOVE_SPEED, 0)
-        // player.sprite('mario-reverse')
+        player.move(-CURRENT_MOVE_SPEED, 0)
     })
 
     keyDown('right', () => {
-        player.move(MOVE_SPEED, 0)
+        player.move(CURRENT_MOVE_SPEED, 0)
     })
 
     player.action(() => {
+        camPos(player.pos.x + 100, player.pos.y - 100)
+        if (player.pos.y >= FALL_DEATH) {
+            go('lose', { score: scoreLabel.value })
+        }
         if (player.grounded()) {
             isJumping = false
         }
