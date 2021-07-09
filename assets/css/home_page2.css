@@ -63,8 +63,8 @@ li{
 a:link{color: #005C61; }
 nav li a:link{color: #01D6E0;}
 a:visited{color: black; text-shadow: none;}
-a:hover{color: skyblue;}
-a:active{color: lightskyblue;}
+a:hover{cursor: pointer;}
+a:active{color: skyblue;}
 
 
 .titleShadow{
@@ -130,11 +130,11 @@ look to it. Future descriptions will be added to detail the next websites */
     border-radius: 20px;
 }
 .aProject:hover{
-    border: 10px solid skyblue;
-    color: skyblue;
+    border: 10px solid #005C61;
+    background: #45DDE6;
+    color: #005C61;
     transition: 0.25s;
 }
-
 .aProject img{
     width: 100%;
     border-top-right-radius: 10px;
@@ -228,10 +228,11 @@ footer{
     box-shadow: 0px 5px 10px #223031;
 }
 .slideShowBox:hover{
-    border: 10px solid skyblue;
-    color: skyblue;
+    border: 10px solid #01D6E0;
+    color: #005C61;
     transition: 0.25s;
 }
+
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {

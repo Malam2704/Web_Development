@@ -6,7 +6,7 @@ include $path . "assets/inc/header.php";
     <nav id="navigation" class="header">
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#individual">Featured Projects</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
             <li><a href="emailform.php">Contact Form</a></li>
             <li onclick="darkMode()" id="darkMode" style="cursor: pointer;"><a>Dark Mode</a></li>
         </ul>
@@ -147,7 +147,6 @@ include $path . "assets/inc/header.php";
 
     <div id="projects" class="mySection">
         <h2 class="projectTitle">My Featured Projects</h2>
-
         <div class="project01 aProject" onclick="location.href='ISTE240-ISTE240-Group-Project/index.php'"> <img src="assets/images/CroppedGroupLogin.jpg"> <a href="ISTE240-Group-Project/index.php">The CSS Survival Guide</a></div>
         <div class="project02 aProject" onclick="location.href='newGame/index.html'"> <img src="assets/images/CroppedGTP.jpg"> <a href="newGame/index.html">Democrat or Republican, The Game</a></div>
         <div class="project03 aProject" onclick="location.href='Mario/index.html'"> <img src="assets/images/CroppedMarioGame.jpg"> <a href="Mario/index.html">My Custom Mario Game</a></div>
