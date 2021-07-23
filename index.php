@@ -3,21 +3,39 @@ $path = "./";
 include $path . "assets/inc/header.php";
 ?>
 <div class="topSection">
-    <nav id="navigation" class="header">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Featured Projects</a></li>
-            <li><a href="emailform.php">Contact Form</a></li>
-            <li onclick="darkMode()" id="darkMode" style="cursor: pointer;"><a>Dark Mode</a></li>
+    <!-- <nav id="navigation" class="header">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Featured Projects</a></li>
+                <li><a href="emailform.php">Contact Form</a></li>
+                <li onclick="darkMode()" id="darkMode" style="cursor: pointer;"><a>Dark Mode</a></li>
+            </ul>
+            <div class="progress-bar" id="myBar"></div>
+        </nav> -->
+    <!-- navbar -->
+    <nav class="myNav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <!-- Other version -->
+            <!-- <i class='fas fa-bars'></i> -->
+            <span>&#9776;</span>
+        </label>
+        <label class="logo">Mohammed Alam</label>
+        <ul class="myNavList" id="myNavList">
+            <li> <a class="navElement" onclick=removeNav() href="#about">About</a> </li>
+            <li> <a class="navElement" onclick=removeNav() href="#slideShowBox">Videos</a> </li>
+            <li> <a class="navElement" onclick=removeNav() href="#projects">Projects</a> </li>
+            <li> <a class="navElement" onclick=removeNav() href="emailform.php">Contact</a> </li>
+            <li onclick="darkMode()" id="darkMode" style="cursor: pointer;"> <a class="navElement" href="#">DarkMode</a> </li>
         </ul>
         <div class="progress-bar" id="myBar"></div>
     </nav>
 
 
     <!-- A description of me and 4 paragraphs entailing my eduction
-            past prgramming knowledge, what my hobbies are, and my contact information -->
+                    past prgramming knowledge, what my hobbies are, and my contact information -->
     <div id="about">
-        <h1 class="ht titleShadow">Mohammed Alam</h1>
+        <h1 class="ht titleShadow">My Project Portfolio</h1>
         <p class="p1">
             Hello, my name is Mohammed Alam, and I am currently a Software Engineering/ Computer
             Science Major at RIT, looking to minor in Business & Web & Mobile Development.

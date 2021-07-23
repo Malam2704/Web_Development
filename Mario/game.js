@@ -47,6 +47,7 @@ scene("game", ({ level, score }) => {
     layers(['bg', 'obj', 'ui'], 'obj')
 
     const maps = [
+
         [
             '     =   = ===== =   = ===== =   = =   = ===== ====  = =====  =   = ===== ===== = =====',
             '     == == =   = =   = =   = == == == == =     =   = = ==     == == =   = =   = = =   =',
@@ -57,7 +58,7 @@ scene("game", ({ level, score }) => {
             '                                                                                       ',
             '                                                                                       ',
             '                                                                                       ',
-            '     %   =*=%=                             }}}}}}                                      ',
+            '     %   =*=%=      p                      }}}}}}                                      ',
             '                                                                                       ',
             '                            -+                                                      -+ ',
             '                    ^   ^   ()                                                      () ',
@@ -88,6 +89,7 @@ scene("game", ({ level, score }) => {
     const levelCfg = {
         width: 20,
         height: 20,
+        'p': [sprite('block'), solid()],
         '=': [sprite('block'), solid()],
         '$': [sprite('coin'), 'coin'],
         '%': [sprite('surprise'), solid(), 'coin-surprise'],
@@ -221,7 +223,7 @@ scene("game", ({ level, score }) => {
     keyPress('a', () => {
         CURRENT_MOVE_SPEED = MOVE_SPEED * 2
     })
-    keyDown('s', () => {
+    keyRelease('a', () => {
         CURRENT_MOVE_SPEED = MOVE_SPEED
     })
 

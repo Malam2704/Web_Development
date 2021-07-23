@@ -15,56 +15,95 @@ body{
 
 /* This is the dark Mode toggles by darkMode() in js */
 .dark-mode {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: black;
     color: white;
 }
 
-.mySection{
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
+/*This is the progress bar in the anv, that shows how much of the page you scrolled*/
 .progress-bar {
     height: 5px;
     background: #01D6E0;
     width: 0%;
 }
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Just a nav guide to flex direte them in a row and increase the
 font size, space them apart evenly and remvoe the list symbol */
 nav{
+    /* background: #0082e6; */
+    background:#005C61;
+    height: 80px;
+    width: 100%;
     position: fixed;
-    min-width: 100%;
-    margin-bottom: 2em;
     box-shadow: 0px 5px 10px #223031;
     z-index: 1;
+    /* min-width: 100%;
+    margin-bottom: 2em;
     background-color: #005C61;
     font-size: large;
-    font-weight: bold;
+    font-weight: bold; */
 }
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight:bold;
+  }
 nav ul{
-    display: flex;
+    float: right;
+    margin-right: 20px;
+    font-weight: 700;
+    /* display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
-    list-style-type: none;
+    list-style-type: none; */
 }
 nav li{
-    width: 100%;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    /* width: 100%; */
 }
 nav li a{
-    text-decoration: none;
-    color: #01D6E0;
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    /* text-decoration: none;
+    color: #01D6E0; */
 }
-li{
-    padding: .5em;
+nav li a.active, nav li a:hover{
+    /* background: #1b9bff; */
+    /* background: #ED0000; */
+    background: #0098a0;
+    transition: .3s;
 }
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+#check{
+    display: none;
+}
+  
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* Link features for when the links are beign interacted with the user on */
-a:link{color: #005C61; }
-nav li a:link{color: #01D6E0;}
+a:link{color: #005C61; text-decoration: none;}
+nav li a:link{color: white;}
 a:visited{color: black; text-shadow: none;}
-a:hover{cursor: pointer;}
-a:active{color: skyblue;}
+nav li a:visited{color: white; text-shadow: none;}
+a:hover{color: lightskyblue;}
+.aProject a:link{color: #005c61;}
+a:active{color: silver;}
 
 
 .titleShadow{
@@ -109,7 +148,7 @@ this format so it looks more organzied */
     '. p5 picture .'
     '. p6 picture .'
     '. p7 picture .';
-    padding-top: 3em;
+    padding-top: 4em;
     padding-bottom: 3em;
     margin-bottom: 2em;
 }
@@ -151,16 +190,15 @@ look to it. Future descriptions will be added to detail the next websites */
 .projectTitle{ grid-area: pjTitle; 
     text-align: center;
     font-size: 4em;}
-.project01{ grid-area: pj01;}
-.project02{ grid-area: pj02;}
-.project03{ grid-area: pj03;}
-.project04{ grid-area: pj04;}
-.project05{ grid-area: pj05;}
-.project06{ grid-area: pj06;}
-.project07{ grid-area: pj07;}
-.project08{ grid-area: pj08;}
-.project09{ grid-area: pj09;}
-.project10{ grid-area: pj10;}
+.project1{ grid-area: pj1;}
+.project2{ grid-area: pj2;}
+.project3{ grid-area: pj3;}
+.project4{ grid-area: pj4;}
+.project5{ grid-area: pj5;}
+.project6{ grid-area: pj6;}
+.project7{ grid-area: pj7;}
+.project8{ grid-area: pj8;}
+.project8{ grid-area: pj9;}
 #projects{
     margin-top: 10em;
     width: 80%;
@@ -171,10 +209,9 @@ look to it. Future descriptions will be added to detail the next websites */
     grid-gap: 2em;
     grid-template-areas: 
     "pjTitle pjTitle pjTitle"
-    'pj01 pj02 pj03'
-    'pj04 pj05 pj06'
-    'pj07 pj08 pj09'
-    'pj10 . .';
+    'pj1 pj2 pj3'
+    'pj4 pj5 pj6'
+    'pj7 pj8 pj9';
 }
 
 
@@ -227,12 +264,6 @@ footer{
     border-radius: 20px;
     box-shadow: 0px 5px 10px #223031;
 }
-.slideShowBox:hover{
-    border: 10px solid #01D6E0;
-    color: #005C61;
-    transition: 0.25s;
-}
-
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
@@ -315,11 +346,11 @@ footer{
 }
 /* ___________________________________________________ */
 
-@media only screen and (min-width:1400px){
+/* @media only screen and (min-width:1400px){
     nav{
         font-size: x-large;
     }
-}
+} */
 
 /* Media query to adject the material so it's typically stacking top to bottom in
 -stead of left to right like the usual defaults */
@@ -346,11 +377,11 @@ footer{
         grid-gap: 2em;
         grid-template-areas: 
         "pjTitle pjTitle"
-        'pj01 pj02'
-        'pj03 pj04'
-        'pj05 pj06'
-        'pj07 pj08'
-        'pj09 pj10';
+        'pj1 pj2'
+        'pj3 pj4'
+        'pj5 pj6'
+        'pj7 pj8'
+        'pj9 .';
     }
 }
 
@@ -362,7 +393,7 @@ footer{
     }
 
     /* Remove all the nav colors when screen is small. */
-    nav{
+    /* nav{
         position: unset;
         background-color:unset;
         box-shadow: unset;
@@ -376,7 +407,7 @@ footer{
         border: 10px solid #005C61;
         border-radius: 20px;
         padding: .25em;
-    }
+    } */
     
     .contentSection{
         margin: 0;
@@ -418,16 +449,15 @@ footer{
         grid-gap: 2em;
         grid-template-areas: 
         "pjTitle"
-        'pj01'
-        'pj02'
-        'pj03'
-        'pj04'
-        'pj05'
-        'pj06'
-        'pj07'
-        'pj08'
-        'pj09'
-        'pj10';
+        'pj1'
+        'pj2'
+        'pj3'
+        'pj4'
+        'pj5'
+        'pj6'
+        'pj7'
+        'pj8'
+        'pj9';
     }
 }
 
@@ -450,4 +480,59 @@ textarea{
 }
 .emailprocess .emailform{
     border: none;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media (max-width: 1110px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .myNav .myNavList li a{
+        font-size: 16px;
+    }
+
+    /* When the Bruger Nav is here #about is pushed down */
+    #about{
+        padding-top: 6em;
+        font-size: 0.7em;
+    }
+  }
+@media (max-width: 1058px) {
+    .checkbtn{
+        display: block;
+    }
+    .myNavList{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        /* background: #2c3e50; */
+        background: #005c61;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        
+    }
+    .myNav .myNavList li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .myNav .myNavList li a{
+        font-size: 20px;
+    }
+    .navElement.active, .navElement:hover{
+        background: none;
+        /* color: #0082e6; */
+        color:  #0098a0;
+    }
+    #check:checked ~ .myNavList{
+        left: 0;
+    }
+}
+@media (max-width: 450px) {
+    label.logo{
+        font-size: 19px;
+    }
 }

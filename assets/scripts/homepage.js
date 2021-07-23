@@ -54,7 +54,7 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(slideIndex = slideIndex + n);
 }
 
 function currentSlide(n) {
@@ -79,3 +79,6 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 // --------------------------------------------------
+function removeNav() {
+  document.getElementById('myNavList').style = 'left: -100%';
+}
