@@ -26,7 +26,7 @@ include $path . "assets/inc/header.php";
             <li> <a class="navElement" onclick=removeNav() href="#slideShowBox">Videos</a> </li>
             <li> <a class="navElement" onclick=removeNav() href="#projects">Projects</a> </li>
             <li> <a class="navElement" onclick=removeNav() href="emailform.php">Contact</a> </li>
-            <li onclick="darkMode()" id="darkMode" style="cursor: pointer;"> <a class="navElement" href="#">DarkMode</a> </li>
+            <li onclick="darkMode()" id="darkMode" style="cursor: pointer;"> <a class="navElement">DarkMode</a> </li>
         </ul>
         <div class="progress-bar" id="myBar"></div>
     </nav>

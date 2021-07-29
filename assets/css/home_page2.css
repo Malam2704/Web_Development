@@ -101,7 +101,7 @@ a:link{color: #005C61; text-decoration: none;}
 nav li a:link{color: white;}
 a:visited{color: black; text-shadow: none;}
 nav li a:visited{color: white; text-shadow: none;}
-a:hover{color: lightskyblue;}
+/* a:hover{color: lightskyblue;} */
 .aProject a:link{color: #005c61;}
 a:active{color: silver;}
 
@@ -415,6 +415,7 @@ footer{
     }
     .picture #myPic{
         border-radius: 50%;
+        border: 2px solid #005C61;
     }
     #about{
         padding: 1em;
@@ -531,7 +532,7 @@ textarea{
         left: 0;
     }
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     label.logo{
         font-size: 19px;
     }

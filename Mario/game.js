@@ -58,7 +58,7 @@ scene("game", ({ level, score }) => {
             '                                                                                       ',
             '                                                                                       ',
             '                                                                                       ',
-            '     %   =*=%=      p                      }}}}}}                                      ',
+            '     %   =*=%=                             }}}}}}                                      ',
             '                                                                                       ',
             '                            -+                                                      -+ ',
             '                    ^   ^   ()                                                      () ',
@@ -89,7 +89,7 @@ scene("game", ({ level, score }) => {
     const levelCfg = {
         width: 20,
         height: 20,
-        'p': [sprite('block'), solid()],
+        // 'p': [sprite('block'), solid()],
         '=': [sprite('block'), solid()],
         '$': [sprite('coin'), 'coin'],
         '%': [sprite('surprise'), solid(), 'coin-surprise'],
