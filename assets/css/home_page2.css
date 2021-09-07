@@ -7,7 +7,7 @@ basis for the creation of the webpage */
 
 body{
     background: rgb(1,214,224);
-    background: linear-gradient(90deg, rgba(1,214,224,1) 0%, rgba(0,92,97,1) 100%);
+    background: linear-gradient(90deg, rgba(0,92,97,1) 0%, #191919 100%);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
     color: #E6E6E6;
@@ -31,7 +31,7 @@ body{
 font size, space them apart evenly and remvoe the list symbol */
 nav{
     /* background: #0082e6; */
-    background:#005C61;
+    background:black;
     height: 80px;
     width: 100%;
     position: fixed;
@@ -123,6 +123,7 @@ this format so it looks more organzied */
 }
 
 .ht{grid-area: ht; 
+    font-size: 3em;
     text-shadow: 2px 5px #005c61; 
     text-align: center; margin-top: 1em;}
 .p1{grid-area: p1;}
@@ -496,7 +497,7 @@ textarea{
     /* When the Bruger Nav is here #about is pushed down */
     #about{
         padding-top: 6em;
-        font-size: 0.7em;
+        font-size: 1.2em;
     }
   }
 @media (max-width: 1058px) {

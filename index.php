@@ -76,7 +76,7 @@ include $path . "assets/inc/header.php";
             a goto for my projects in teh remainder fo this course. -->
 
     <div class="slideShowBox mySection" id="slideShowBox">
-        <h1 style="text-align:center" class="titleShadow">View My Featured Projects</h1>
+        <h1 style="text-align:center" class="titleShadow">Videos of My Featured Projects</h1>
 
         <div class="container">
             <div class="mySlides">
@@ -164,12 +164,12 @@ include $path . "assets/inc/header.php";
     </div>
 
     <div id="projects" class="mySection">
-        <h2 class="projectTitle">My Featured Projects</h2>
-        <div class="project01 aProject" onclick="location.href='ISTE240-ISTE240-Group-Project/index.php'"> <img src="assets/images/CroppedGroupLogin.jpg"> <a href="ISTE240-Group-Project/index.php">The CSS Survival Guide</a></div>
-        <div class="project02 aProject" onclick="location.href='newGame/index.html'"> <img src="assets/images/CroppedGTP.jpg"> <a href="newGame/index.html">Democrat or Republican, The Game</a></div>
+        <h2 class="projectTitle">View My Featured Projects</h2>
+        <div class="project01 aProject" onclick="location.href='newGame/index.html'"> <img src="assets/images/CroppedGTP.jpg"> <a href="DvR/index.html">Democrat or Republican, The Game</a></div>
+        <div class="project02 aProject" onclick="location.href='altgroup/index.php'"> <img src="assets/images/CroppedCommentSectionGroup.jpg"> <a href="altgroup/index.php">The CSS Survival Guide <br> (Non-SQL edition)</a></div>
         <div class="project03 aProject" onclick="location.href='Mario/index.html'"> <img src="assets/images/CroppedMarioGame.jpg"> <a href="Mario/index.html">My Custom Mario Game</a></div>
-        <div class="project04 aProject" onclick="location.href='altgroup/index.php'"> <img src="assets/images/CroppedCommentSectionGroup.jpg"> <a href="altgroup/index.php">The CSS Survival Guide <br> (Non-SQL edition)</a></div>
-        <div class="project05 aProject" onclick="location.href='last_semester/project3/index.html'"> <img src="assets/images/CroppedWebCalculator.jpg"> <span> <a href="calculator/index.html">Web Calculator</a> <span></div>
+        <div class="project04 aProject" onclick="location.href='ISTE240-ISTE240-Group-Project/index.php'"> <img src="assets/images/CroppedGroupLogin.jpg"> <a href="ISTE240-Group-Project/index.php">The CSS Survival Guide <br> (RIT only SQL Edition)</a></div>
+        <div class="project05 aProject" onclick="location.href='calculator/index.html'"> <img src="assets/images/CroppedWebCalculator.jpg"> <span> <a href="calculator/index.html">Web Calculator</a> <span></div>
         <div class="project06 aProject" onclick="location.href='ISTE-ISTE-INDIVIDUAL-PROJECT/index.php'"> <img src="assets/images/CroppedIndividualPorject.jpg"> <a href="ISTE-INDIVIDUAL-PROJECT/index.php">Welcome to New York City</a></div>
         <div class="project07 aProject" onclick="location.href='nycproject/index.php'"> <img src="assets/images/CroppedNonSQLIP.jpg"> <a href="project1/index.php">Welcome to NYC <br> (Non-SQL edition)</a></div>
         <div class="project08 aProject" onclick="location.href='last_semester/project3/index.html'"> <img src="assets/images/CroppedCyberPunk.jpg"> <span> <a href="last_semester/project3/index.html">CyberPunk 2077 fanpage</a> <span></div>
