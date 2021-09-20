@@ -165,12 +165,12 @@ look to it. Future descriptions will be added to detail the next websites */
     
     padding: .5em;
 
-    border: 10px solid #005C61;
+    border: 15px solid #005C61;
     box-shadow: 15px 10px #223031;
     border-radius: 20px;
 }
 .aProject:hover{
-    border: 10px solid #005C61;
+    border: 8px solid #45DDE6;
     background: #45DDE6;
     color: #005C61;
     transition: 0.25s;
